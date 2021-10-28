@@ -64,10 +64,10 @@ function vendorCSS() {
 
 function startwatch() {
   watch("src/assets/scss/*.scss", series(buildStyles, browsersyncReload));
-  watch("src/assets/**/*.js", series(scripts, browsersyncReload));
+  watch("src/assets/js/*.js", series(scripts, browsersyncReload));
   watch("src/*.pug", series(views, browsersyncReload));
-  watch("dist/*.html").on("change", browserSync.reload);
-  watch("src/assets/**/*", series(imgTask, browsersyncReload));
+  // watch("dist/*.html").on("change", browserSync.reload);
+  watch("src/assets/img/*", series(imgTask, browsersyncReload));
 }
 
 exports.browsersync = browsersync;

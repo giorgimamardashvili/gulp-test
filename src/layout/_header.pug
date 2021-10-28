@@ -11,9 +11,13 @@ header.header
                         img(src="assets/img/main-logo.png", alt="")
                 .header__nav 
                     ul
-                        each val in titles 
-                            li 
-                                a(href="#")= val
+                        each val, i in titles 
+                            if i == 0
+                                li 
+                                    a(href="#" class="active")= val
+                            else
+                                li
+                                    a(href="#")= val
                 .header__right
                     .header__search.headers-info
                         img(src="assets/img/search.svg", alt="")

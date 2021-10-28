@@ -10,7 +10,7 @@
     const products = [
         {
             title: 'მაგიდა',
-            image: 'assets/img/product-img.png',
+            image: 'assets/img/product-img.jpg',
             price: 88,
             brand: "OEM",
             model: 'FBADE-LTE14-5m',
@@ -18,7 +18,7 @@
         },
         {
             title: 'მაგიდა',
-            image: 'assets/img/product-img.png',
+            image: 'assets/img/product-img.jpg',
             price: 88,
             brand: "OEM",
             model: 'FBADE-LTE14-5m',
@@ -26,7 +26,7 @@
         },
         {
             title: 'მაგიდა',
-            image: 'assets/img/product-img.png',
+            image: 'assets/img/product-img.jpg',
             price: 88,
             brand: "OEM",
             model: 'FBADE-LTE14-5m',
@@ -34,7 +34,7 @@
         },
         {
             title: 'მაგიდა',
-            image: 'assets/img/product-img.png',
+            image: 'assets/img/product-img.jpg',
             price: 88,
             brand: "OEM",
             model: 'FBADE-LTE14-5m',
@@ -42,7 +42,7 @@
         },
         {
             title: 'მაგიდა',
-            image: 'assets/img/product-img.png',
+            image: 'assets/img/product-img.jpg',
             price: 88,
             brand: "OEM",
             model: 'FBADE-LTE14-5m',
@@ -50,7 +50,7 @@
         },
         {
             title: 'მაგიდა',
-            image: 'assets/img/product-img.png',
+            image: 'assets/img/product-img.jpg',
             price: 88,
             brand: "OEM",
             model: 'FBADE-LTE14-5m',
@@ -58,7 +58,7 @@
         },
         {
             title: 'მაგიდა',
-            image: 'assets/img/product-img.png',
+            image: 'assets/img/product-img.jpg',
             price: 88,
             brand: "OEM",
             model: 'FBADE-LTE14-5m',
@@ -95,28 +95,35 @@ html(lang="en")
                 .standart-slider__bottom
                     .standart-slider__container.swiper.products-slider__swiper
                         .swiper-wrapper
-                        each product, i in products
-                            .swiper-slide.products-slider__slide
-                                .slider-img 
-                                    img(src=product.image, alt="")
-                                .slider-text 
-                                    h4=product.title
-                                    p=product.title
-                                    span BRAND: ${product.brand}
-                                    span MODEL: ${product.model}
-                                    span EAN/UPC: ${product.ean}
-                                    .slider-text__checkbox 
-                                        input(type="checkbox", name="")
-                                        label Compare
-                                .slider-bottom 
-                                    .slider-bottom__info
-                                        .price 
-                                             p price: 
-                                                span= `${product.price}$`
-                                        .addto-cart 
-                                            span Add to cart
-                                            img(src="assets/img/basket.svg", alt="")
-                                    .slider-bottom__button
+                            each product, i in products
+                                .swiper-slide.products-slider__slide
+                                    .slider-img 
+                                        img(src=product.image, alt="")
+                                    .slider-text 
+                                        h4=product.title
+                                        p=product.title
+                                        div 
+                                            span BRAND:
+                                            span= " " + product.brand
+                                        div 
+                                            span MODEL:
+                                            span= " " + product.model
+                                        div 
+                                            span EAN/UPC:
+                                            span= " " + product.ean
+                                        .slider-text__checkbox 
+                                            input(type="checkbox", name="")
+                                            label Compares
+                                    .slider-bottom 
+                                        .slider-bottom__info
+                                            .price 
+                                                    p price:  
+                                                    span= `${product.price}$`
+                                            .addto-cart 
+                                                span Add to cart
+                                                img(src="assets/img/basket.svg", alt="")
+                                        .slider-bottom__button
+                                            .quick-view Quick View
                     .swiper-button-prev.main-slider__prev.button.products-slider__prev
                     .swiper-button-next.main-slider__next.button.products-slider__next  
 
