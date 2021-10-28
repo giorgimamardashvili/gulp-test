@@ -1,0 +1,21 @@
+.button {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border-radius: 4px;
+  background: transparent;
+  border: 1px solid #fff;
+  @include tab {
+    display: none;
+  }
+
+  &::after {
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff;
+  }
+  &:hover {
+    background-color: $green;
+    border: 1px solid $green;
+  }
+}

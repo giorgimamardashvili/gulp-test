@@ -1,0 +1,53 @@
+$black: #202020;
+$green: #65ccae;
+$blue: #00cbff;
+
+$xl: 1600px;
+$lg: 1280px;
+$tab: 1024px;
+$sm: 700px;
+
+@mixin rwd($screen) {
+  @media (max-width: $screen+"px") {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (max-width: #{$xl}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and (max-width: #{$lg}) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media screen and (max-width: #{$tab}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media screen and (max-width: #{$sm}) {
+    @content;
+  }
+}
+
+@mixin scrollSetup($thumbcolor, $width: 2px, $bgcolor: transparent) {
+  &::-webkit-scrollbar {
+    width: $width;
+    background-color: $bgcolor;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 30px;
+    background-color: $thumbcolor;
+  }
+  &::-webkit-scrollbar-track {
+    margin: 15px 0;
+    background-color: $bgcolor;
+  }
+}

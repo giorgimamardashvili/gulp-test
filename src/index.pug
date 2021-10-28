@@ -1,0 +1,126 @@
+- 
+    const slides = [
+        {title: 'We bring together international experience and local knowledge', button: 'More'},
+        {title: 'We bring together international experience and local knowledge', button: 'More'},
+        {title: 'We bring together international experience and local knowledge', button: 'More'},
+        {title: 'We bring together international experience and local knowledge', button: 'More'}
+    ]
+
+-
+    const products = [
+        {
+            title: 'მაგიდა',
+            image: 'assets/img/product-img.png',
+            price: 88,
+            brand: "OEM",
+            model: 'FBADE-LTE14-5m',
+            ean: '0708747435788'
+        },
+        {
+            title: 'მაგიდა',
+            image: 'assets/img/product-img.png',
+            price: 88,
+            brand: "OEM",
+            model: 'FBADE-LTE14-5m',
+            ean: '0708747435788'
+        },
+        {
+            title: 'მაგიდა',
+            image: 'assets/img/product-img.png',
+            price: 88,
+            brand: "OEM",
+            model: 'FBADE-LTE14-5m',
+            ean: '0708747435788'
+        },
+        {
+            title: 'მაგიდა',
+            image: 'assets/img/product-img.png',
+            price: 88,
+            brand: "OEM",
+            model: 'FBADE-LTE14-5m',
+            ean: '0708747435788'
+        },
+        {
+            title: 'მაგიდა',
+            image: 'assets/img/product-img.png',
+            price: 88,
+            brand: "OEM",
+            model: 'FBADE-LTE14-5m',
+            ean: '0708747435788'
+        },
+        {
+            title: 'მაგიდა',
+            image: 'assets/img/product-img.png',
+            price: 88,
+            brand: "OEM",
+            model: 'FBADE-LTE14-5m',
+            ean: '0708747435788'
+        },
+        {
+            title: 'მაგიდა',
+            image: 'assets/img/product-img.png',
+            price: 88,
+            brand: "OEM",
+            model: 'FBADE-LTE14-5m',
+            ean: '0708747435788'
+        }
+    ]
+
+
+doctype html
+html(lang="en")
+    head
+        include layout/_head
+    body 
+        include layout/_header
+        main
+            section.main-slider
+                .swiper.main-slider__container
+                    .swiper-wrapper 
+                        each slide, i in slides
+                            .swiper-slide.main-slider__slide
+                                h2=slide.title   
+                                a.more=slide.button
+                    .swiper-pagination.main-slider__pag
+                    .swiper-button-prev.main-slider__prev.button
+                    .swiper-button-next.main-slider__next.button
+                .main-slider__bottom
+                    .blue-button
+                        img(src="assets/img/blue-arrow-down.png", alt="")
+
+            section.products-slider.standart-slider.container
+                .standart-slider__top
+                    h3 Products
+                    a(href="#") View All
+                .standart-slider__bottom
+                    .standart-slider__container.swiper.products-slider__swiper
+                        .swiper-wrapper
+                        each product, i in products
+                            .swiper-slide.products-slider__slide
+                                .slider-img 
+                                    img(src=product.image, alt="")
+                                .slider-text 
+                                    h4=product.title
+                                    p=product.title
+                                    span BRAND: ${product.brand}
+                                    span MODEL: ${product.model}
+                                    span EAN/UPC: ${product.ean}
+                                    .slider-text__checkbox 
+                                        input(type="checkbox", name="")
+                                        label Compare
+                                .slider-bottom 
+                                    .slider-bottom__info
+                                        .price 
+                                             p price: 
+                                                span= `${product.price}$`
+                                        .addto-cart 
+                                            span Add to cart
+                                            img(src="assets/img/basket.svg", alt="")
+                                    .slider-bottom__button
+                    .swiper-button-prev.main-slider__prev.button.products-slider__prev
+                    .swiper-button-next.main-slider__next.button.products-slider__next  
+
+
+        include layout/_footer
+        script(src='assets/js/swiper-bundle.min.js')
+        script(src='assets/js/main.js')

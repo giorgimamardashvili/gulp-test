@@ -1,0 +1,28 @@
+- const titles = ['Home', 'About us', 'Services', 'Products', 'Solutions', 'Support', 'Contact']
+
+header.header 
+            .container.header__container
+                .header__left
+                    .burger
+                        span 
+                        span 
+                        span 
+                    .header__left__logo 
+                        img(src="assets/img/main-logo.png", alt="")
+                .header__nav 
+                    ul
+                        each val in titles 
+                            li 
+                                a(href="#")= val
+                .header__right
+                    .header__search.headers-info
+                        img(src="assets/img/search.svg", alt="")
+                    a.header__login.headers-info
+                        img(src="assets/img/user-line.svg", alt="")
+                    .header__basket.headers-info
+                        img(src="assets/img/basket.svg", alt="")
+                    .header__lang.headers-info
+                        a(href="#") Eng
+
+
+            

@@ -1,0 +1,29 @@
+.standart-slider {
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    h3 {
+      font-family: "bold";
+      font-size: 28px;
+      text-align: left;
+    }
+    a {
+      width: 100px;
+      height: 44px;
+      border-radius: 4px;
+      background: transparent;
+      border: 1px solid #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__bottom {
+    width: 100%;
+  }
+  &__container {
+  }
+}

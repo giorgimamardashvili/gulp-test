@@ -1,0 +1,1 @@
+const swiperMain=new Swiper(".main-slider__container",{direction:"horizontal",slidesPerView:1,pagination:{el:".main-slider__pag"},navigation:{nextEl:".main-slider__next",prevEl:".main-slider__prev"}}),swiperProducts=new Swiper(".products-slider__swiper",{direction:"horizontal",slidesPerView:"auto",navigation:{nextEl:".products-slider__next",prevEl:".products-slider__prev"}});
