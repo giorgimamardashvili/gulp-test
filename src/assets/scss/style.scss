@@ -18,6 +18,10 @@
   font-family: "regular";
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   // max-width: 1920px;
   padding: 0 140px;

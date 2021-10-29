@@ -118,7 +118,7 @@ html(lang="en")
     body 
         include layout/_header
         main
-            section.main-slider
+            section.main-slider#mainSlider
                 .swiper.main-slider__container
                     .swiper-wrapper 
                         each slide, i in slides
@@ -129,10 +129,10 @@ html(lang="en")
                     .swiper-button-prev.main-slider__prev.button
                     .swiper-button-next.main-slider__next.button
                 .main-slider__bottom
-                    .blue-button
+                    a(href="#productSlider" class="blue-button")
                         img(src="assets/img/blue-arrow-down.png", alt="")
 
-            section.products-slider.standart-slider.container
+            section.products-slider.standart-slider.container#productSlider
                 .standart-slider__top
                     h3 Products
                     a(href="#") View All
