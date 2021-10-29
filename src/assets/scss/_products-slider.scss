@@ -1,22 +1,46 @@
 .products-slider {
+  &__swiper {
+    height: 585px;
+    @include xl {
+      height: 540px;
+    }
+    @include sm {
+      height: unset;
+    }
+  }
   &__slide {
     width: 395px;
-    min-height: 530px;
+    height: 515px;
     background: transparent;
     padding: 20px;
     border-radius: 4px;
     border: 0.5px solid #f1f1f1;
     overflow: hidden;
+    transition: height 0.2s;
 
     &:hover {
+      height: 583px;
       box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.16);
       .slider-bottom__button {
-        display: block;
+        opacity: 1;
       }
     }
     @include xl {
       width: 330px;
+      height: 470px;
       padding: 12px;
+      &:hover {
+        height: 537px;
+        // .slider-bottom__button {
+        //   opacity: 1;
+        // }
+      }
+    }
+    @include tab {
+      height: 537px;
+    }
+    @include sm {
+      box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.16);
     }
     .green-new {
       position: absolute;
@@ -112,11 +136,13 @@
       }
     }
     &__button {
-      display: none;
+      opacity: 0;
+      display: block;
       padding: 15px 0 0 0;
       border-top: 1px solid #f3f3f3;
-      @include sm {
-        display: block;
+      transition: opacity 0.3s;
+      @include tab {
+        opacity: 1;
       }
       .quick-view {
         width: 100%;
