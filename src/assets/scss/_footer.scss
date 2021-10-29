@@ -1,0 +1,91 @@
+.footer {
+  background-image: url("../img/main-slider-img.jpg");
+  background-position: center top;
+  background-size: cover;
+  background-color: rgba($black, 0.95);
+  background-blend-mode: multiply;
+  height: 200px;
+  @include tab {
+    height: 460px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+
+  p,
+  span {
+    color: rgba(#f3f3f3, 0.8);
+    font-size: 18px;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    @include tab {
+      flex-direction: column;
+    }
+
+    p {
+      flex: 0 0 20%;
+      @include tab {
+        width: fit-content;
+        order: 2;
+        flex: unset;
+      }
+    }
+  }
+  &__info {
+    flex: 0 0 20%;
+    @include tab {
+      width: fit-content;
+      order: 0;
+      flex: unset;
+    }
+    div {
+      display: flex;
+      align-items: center;
+      &:not(&:last-child) {
+        margin-bottom: 25px;
+      }
+      img {
+        margin-right: 8px;
+      }
+      span {
+      }
+    }
+  }
+  &__button {
+    flex: 0 0 20%;
+    @include tab {
+      width: fit-content;
+      order: 3;
+      flex: unset;
+    }
+    display: flex;
+    justify-content: center;
+    a {
+      img {
+        text-align: center;
+      }
+    }
+  }
+  &__socials {
+    flex: 0 0 40%;
+    @include tab {
+      width: fit-content;
+      flex: unset;
+      order: 1;
+    }
+    a {
+      margin-left: 25px;
+      &:first-child {
+        margin-left: 20%;
+      }
+      @include tab {
+        margin-left: 25px !important;
+      }
+      img {
+      }
+    }
+  }
+}

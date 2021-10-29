@@ -3,6 +3,10 @@
   height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
+  margin-bottom: 40px;
+  @include tab {
+    height: auto;
+  }
   &__container {
     flex-grow: 1;
     margin: 0;
@@ -27,6 +31,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @include tab {
+      padding: 50px 0;
+    }
 
     h2 {
       color: white;
@@ -34,6 +41,9 @@
       max-width: 50%;
       margin-bottom: 50px;
       text-align: center;
+      @include sm {
+        max-width: 80%;
+      }
     }
     a {
       width: 180px;

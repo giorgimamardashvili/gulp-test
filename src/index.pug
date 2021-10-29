@@ -9,7 +9,7 @@
 -
     const products = [
         {
-            title: 'მაგიდა',
+            title: 'OEM 4G 14dBi Panel Antenna',
             image: 'assets/img/product-img.jpg',
             price: 88,
             brand: "OEM",
@@ -17,7 +17,7 @@
             ean: '0708747435788'
         },
         {
-            title: 'მაგიდა',
+            title: 'OEM 4G 14dBi Panel Antenna',
             image: 'assets/img/product-img.jpg',
             price: 88,
             brand: "OEM",
@@ -25,7 +25,7 @@
             ean: '0708747435788'
         },
         {
-            title: 'მაგიდა',
+            title: 'OEM 4G 14dBi Panel Antenna',
             image: 'assets/img/product-img.jpg',
             price: 88,
             brand: "OEM",
@@ -33,7 +33,7 @@
             ean: '0708747435788'
         },
         {
-            title: 'მაგიდა',
+            title: 'OEM 4G 14dBi Panel Antenna',
             image: 'assets/img/product-img.jpg',
             price: 88,
             brand: "OEM",
@@ -41,7 +41,7 @@
             ean: '0708747435788'
         },
         {
-            title: 'მაგიდა',
+            title: 'OEM 4G 14dBi Panel Antenna',
             image: 'assets/img/product-img.jpg',
             price: 88,
             brand: "OEM",
@@ -49,7 +49,7 @@
             ean: '0708747435788'
         },
         {
-            title: 'მაგიდა',
+            title: 'OEM 4G 14dBi Panel Antenna',
             image: 'assets/img/product-img.jpg',
             price: 88,
             brand: "OEM",
@@ -57,13 +57,57 @@
             ean: '0708747435788'
         },
         {
-            title: 'მაგიდა',
+            title: 'OEM 4G 14dBi Panel Antenna',
             image: 'assets/img/product-img.jpg',
             price: 88,
             brand: "OEM",
             model: 'FBADE-LTE14-5m',
             ean: '0708747435788'
-        }
+        },
+    ]
+-
+    const solutions = [
+        {
+            image: 'assets/img/solutions-img.jpg',
+            title: 'OEM 4G 14dBi Panel Antenna Lorem Ipsum'
+        },
+        {
+            image: 'assets/img/solutions-img.jpg',
+            title: 'OEM 4G 14dBi Panel Antenna Lorem Ipsum'
+        },
+        {
+            image: 'assets/img/solutions-img.jpg',
+            title: 'OEM 4G 14dBi Panel Antenna Lorem Ipsum'
+        },
+        {
+            image: 'assets/img/solutions-img.jpg',
+            title: 'OEM 4G 14dBi Panel Antenna Lorem Ipsum'
+        },
+        {
+            image: 'assets/img/solutions-img.jpg',
+            title: 'OEM 4G 14dBi Panel Antenna Lorem Ipsum'
+        },
+    ]
+-
+    const partners = [
+        {
+            image: 'assets/img/partner-img.jpg'
+        },
+        {
+            image: 'assets/img/partner-img.jpg'
+        },
+        {
+            image: 'assets/img/partner-img.jpg'
+        },
+        {
+            image: 'assets/img/partner-img.jpg'
+        },
+        {
+            image: 'assets/img/partner-img.jpg'
+        },
+        {
+            image: 'assets/img/partner-img.jpg'
+        },
     ]
 
 
@@ -97,6 +141,7 @@ html(lang="en")
                         .swiper-wrapper
                             each product, i in products
                                 .swiper-slide.products-slider__slide
+                                    .green-new New
                                     .slider-img 
                                         img(src=product.image, alt="")
                                     .slider-text 
@@ -125,8 +170,39 @@ html(lang="en")
                                         .slider-bottom__button
                                             .quick-view Quick View
                     .swiper-button-prev.main-slider__prev.button.products-slider__prev
-                    .swiper-button-next.main-slider__next.button.products-slider__next  
+                    .swiper-button-next.main-slider__next.button.products-slider__next
+            section.standart-slider.container.solution-slider
+                .standart-slider__top
+                    h3 Solutions
+                    a(href="#") View All
+                .standart-slider__bottom
+                    .standart-slider__container.swiper.solution-slider__container
+                        .swiper-wrapper
+                            each solution, i in solutions
+                                .swiper-slide.solution-slider__slide
+                                    .solution-slider__img 
+                                        img(src=solution.image, alt="")
+                                    .solution-slider__text 
+                                        p=solution.title 
 
+
+                            
+                    .swiper-button-prev.main-slider__prev.button.solution-slider__prev
+                    .swiper-button-next.main-slider__next.button.solution-slider__next 
+            section.standart-slider.partners-slider
+                    .standart-slider__top.container
+                        h3 Solutions
+                        a(href="#") View All
+                    .standart-slider__bottom.container
+                        .swiper.partners-slider__container
+                            .swiper-wrapper
+                                each partner, i in partners
+                                    .swiper-slide.partners-slider__slide
+                                        img(src=partner.image, alt="")
+                    .swiper-pagination.partners-slider__pag
+            section.become-partner.container
+                .become-partner__wrapper
+                    a(href="")  Become our partner
 
         include layout/_footer
         script(src='assets/js/swiper-bundle.min.js')

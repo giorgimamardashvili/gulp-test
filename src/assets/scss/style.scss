@@ -19,9 +19,15 @@
 }
 
 .container {
-  max-width: 1700px;
-  padding: 0 30px;
+  // max-width: 1920px;
+  padding: 0 140px;
   margin: 0 auto;
+  @include lg {
+    padding: 0 100px;
+  }
+  @include tab {
+    padding: 0 16px;
+  }
 }
 
 h1,
@@ -33,6 +39,10 @@ h4 {
 
 @import "header";
 @import "button";
+@import "main-slider";
 @import "standart-slider";
 @import "products-slider";
-@import "main-slider";
+@import "solution-slider";
+@import "partners-slider";
+@import "become-partner";
+@import "footer";
