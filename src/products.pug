@@ -1,0 +1,136 @@
+-
+    const products = [
+        {
+            title: 'OEM 4G 14dBi Panel Antenna',
+            image: 'assets/img/product-img.jpg',
+            price: 88,
+            brand: "OEM",
+            model: 'FBADE-LTE14-5m',
+            ean: '0708747435788'
+        },
+        {
+            title: 'OEM 4G 14dBi Panel Antenna',
+            image: 'assets/img/product-img.jpg',
+            price: 88,
+            brand: "OEM",
+            model: 'FBADE-LTE14-5m',
+            ean: '0708747435788'
+        },
+        {
+            title: 'OEM 4G 14dBi Panel Antenna',
+            image: 'assets/img/product-img.jpg',
+            price: 88,
+            brand: "OEM",
+            model: 'FBADE-LTE14-5m',
+            ean: '0708747435788'
+        },
+        {
+            title: 'OEM 4G 14dBi Panel Antenna',
+            image: 'assets/img/product-img.jpg',
+            price: 88,
+            brand: "OEM",
+            model: 'FBADE-LTE14-5m',
+            ean: '0708747435788'
+        },
+        {
+            title: 'OEM 4G 14dBi Panel Antenna',
+            image: 'assets/img/product-img.jpg',
+            price: 88,
+            brand: "OEM",
+            model: 'FBADE-LTE14-5m',
+            ean: '0708747435788'
+        },
+        {
+            title: 'OEM 4G 14dBi Panel Antenna',
+            image: 'assets/img/product-img.jpg',
+            price: 88,
+            brand: "OEM",
+            model: 'FBADE-LTE14-5m',
+            ean: '0708747435788'
+        },
+        {
+            title: 'OEM 4G 14dBi Panel Antenna',
+            image: 'assets/img/product-img.jpg',
+            price: 88,
+            brand: "OEM",
+            model: 'FBADE-LTE14-5m',
+            ean: '0708747435788'
+        },
+    ]
+
+doctype html
+html(lang="en")
+    head
+        include layout/_head
+    body 
+        include layout/_header
+        main
+            section.product-page.container
+                .product-page__left
+                    h2 Products
+                    form(action="").product-page__filters
+                        .filter-categories 
+                            .filter-categories__title 
+                                h3 Categories
+                            .filter-categories__choose 
+                                label(for="")
+                                    input(type="checkbox")
+                                    | My Home
+                                label(for="")
+                                    input(type="checkbox")
+                                    | My Home
+                                label(for="")
+                                    input(type="checkbox")
+                                    | My Home
+                                label(for="")
+                                    input(type="checkbox")
+                                    | My Home
+                                label(for="")
+                                    input(type="checkbox")
+                                    | My Home
+                        .filter-filters
+                            .filter-filters__title 
+                            h3 Filters
+                            .filter-item
+                                .filter-item__title 
+                                    h4 Product brand
+                                    img(src="assets/img/arrow-black-down.svg", alt="")
+
+                .product-page__right
+                    .product-page__sorting
+                    .product-page__container
+                        each product, i in products 
+                             .products-slider__slide
+                                    .green-new New
+                                    .slider-img 
+                                        img(src=product.image, alt="")
+                                    .slider-text 
+                                        h4=product.title
+                                        p=product.title
+                                        div 
+                                            span BRAND:
+                                            span= " " + product.brand
+                                        div 
+                                            span MODEL:
+                                            span= " " + product.model
+                                        div 
+                                            span EAN/UPC:
+                                            span= " " + product.ean
+                                        .slider-text__checkbox 
+                                            input(type="checkbox", name="")
+                                            label Compares
+                                    .slider-bottom 
+                                        .slider-bottom__info
+                                            .price 
+                                                    p price:  
+                                                    span= `${product.price}$`
+                                            .addto-cart 
+                                                span Add to cart
+                                                img(src="assets/img/basket.svg", alt="")
+                                        .slider-bottom__button
+                                            .quick-view Quick View
+
+            include layout/_consultation
+        include layout/_footer
+        script(src='assets/js/swiper-bundle.min.js')
+        script(src='assets/js/main.js')

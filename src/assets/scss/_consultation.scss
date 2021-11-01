@@ -1,0 +1,29 @@
+.consultation {
+  position: fixed;
+  bottom: 50px;
+  right: 140px;
+  width: 182px;
+  height: 48px;
+  background: transparent;
+  border-radius: 25px;
+  background: $blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+
+  @include lg {
+    right: 100px;
+  }
+  @include tab {
+    right: 16px;
+    bottom: 20px;
+  }
+
+  span {
+    font-size: 14px;
+    letter-spacing: 0.09em;
+    line-height: 16px;
+    margin-left: 15px;
+  }
+}

@@ -55,102 +55,101 @@
       justify-content: center;
       top: 25px;
     }
-  }
-
-  .slider-img {
-    width: 100%;
-    height: 230px;
-    border-radius: 13px;
-    margin-bottom: 25px;
-
-    img {
+    .slider-img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+      height: 230px;
+      border-radius: 13px;
+      margin-bottom: 25px;
 
-    @include xl {
-      height: 200px;
-      margin-bottom: 20px;
-    }
-  }
-  .slider-text {
-    h4 {
-      font-family: "bold";
-      font-size: 24px;
-      margin-bottom: 15px;
-      @include xl {
-        font-size: 20px;
-      }
-    }
-    p {
-      font-family: "bold";
-      font-size: 14px;
-      opacity: 0.8;
-      margin-bottom: 10px;
-    }
-    div {
-      margin-bottom: 5px;
-    }
-    span {
-      font-size: 15px;
-      opacity: 0.8;
-    }
-    &__checkbox {
-      margin-top: 5px;
-      margin-bottom: 20px;
-      @include xl {
-        margin-bottom: 15px;
-      }
-    }
-  }
-  .slider-bottom {
-    &__info {
-      padding: 15px 0;
-      border-top: 1px solid #f3f3f3;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      .price {
-        display: flex;
-        align-items: center;
-        p {
-          margin-right: 5px;
-          font-size: 12px;
-          opacity: 0.8;
-        }
-        span {
-          font-family: "bold";
-          font-size: 24px;
-          color: $green;
-        }
-      }
-      .addto-cart {
-        display: flex;
-        align-items: center;
-        span {
-          font-size: 14px;
-          margin-right: 10px;
-        }
-      }
-    }
-    &__button {
-      opacity: 0;
-      display: block;
-      padding: 15px 0 0 0;
-      border-top: 1px solid #f3f3f3;
-      transition: opacity 0.3s;
-      @include tab {
-        opacity: 1;
-      }
-      .quick-view {
+      img {
         width: 100%;
-        height: 36px;
-        background-color: $blue;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @include xl {
+        height: 200px;
+        margin-bottom: 20px;
+      }
+    }
+    .slider-text {
+      h4 {
+        font-family: "bold";
+        font-size: 24px;
+        margin-bottom: 15px;
+        @include xl {
+          font-size: 20px;
+        }
+      }
+      p {
+        font-family: "bold";
+        font-size: 14px;
+        opacity: 0.8;
+        margin-bottom: 10px;
+      }
+      div {
+        margin-bottom: 5px;
+      }
+      span {
+        font-size: 15px;
+        opacity: 0.8;
+      }
+      &__checkbox {
+        margin-top: 5px;
+        margin-bottom: 20px;
+        @include xl {
+          margin-bottom: 15px;
+        }
+      }
+    }
+    .slider-bottom {
+      &__info {
+        padding: 15px 0;
+        border-top: 1px solid #f3f3f3;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
+
+        .price {
+          display: flex;
+          align-items: center;
+          p {
+            margin-right: 5px;
+            font-size: 12px;
+            opacity: 0.8;
+          }
+          span {
+            font-family: "bold";
+            font-size: 24px;
+            color: $green;
+          }
+        }
+        .addto-cart {
+          display: flex;
+          align-items: center;
+          span {
+            font-size: 14px;
+            margin-right: 10px;
+          }
+        }
+      }
+      &__button {
+        opacity: 0;
+        display: block;
+        padding: 15px 0 0 0;
+        border-top: 1px solid #f3f3f3;
+        transition: opacity 0.3s;
+        @include tab {
+          opacity: 1;
+        }
+        .quick-view {
+          width: 100%;
+          height: 36px;
+          background-color: $blue;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
       }
     }
   }

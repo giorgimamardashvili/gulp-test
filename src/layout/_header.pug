@@ -1,4 +1,34 @@
-- const titles = ['Home', 'About us', 'Services', 'Products', 'Solutions', 'Support', 'Contact']
+-
+    const titles = [
+        {
+            title: 'Home',
+            link: "index"
+        }, 
+        {
+            title: 'About us',
+            link: ""
+        }, 
+        {
+            title: 'Services',
+            link: ""
+        }, 
+        {
+            title: 'Products',
+            link: "products"
+        }, 
+        {
+            title: 'Solutions',
+            link: ""
+        }, 
+        {
+            title: 'Support',
+            link: ""
+        }, 
+        {
+            title: 'Contact',
+            link: ""
+        }, 
+    ]
 
 header.header 
             .container.header__container
@@ -14,10 +44,10 @@ header.header
                         each val, i in titles 
                             if i == 0
                                 li 
-                                    a(href="#" class="active")= val
+                                    a(href= val.link + '.html', class="active")= val.title
                             else
                                 li
-                                    a(href="#")= val
+                                    a(href= val.link + '.html')= val.title
                 .header__right
                     .header__search.headers-info
                         img(src="assets/img/search.svg", alt="")
