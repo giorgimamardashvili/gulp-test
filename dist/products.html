@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body> 
@@ -35,45 +36,185 @@
     </header>
     <main>
       <section class="product-page container">
+        <div class="links"> <a href="">Home</a><a href="">Products</a><a href="">Antenas</a></div>
         <div class="product-page__left">
           <h2>Products</h2>
-          <form class="product-page__filters" action="">
+          <form class="product-page__filters" action="" id="formId">
             <div class="filter-categories"> 
               <div class="filter-categories__title"> 
                 <h3>Categories</h3>
               </div>
               <div class="filter-categories__choose"> 
-                <label for="">
-                  <input type="checkbox">My Home
+                <label class="checkbox">
+                  <input type="checkbox" name="choose"><span class="checkmark"></span><span class="checkbox-title">My Home</span>
                 </label>
-                <label for="">
-                  <input type="checkbox">My Home
+                <label class="checkbox">
+                  <input type="checkbox"><span class="checkmark"></span><span class="checkbox-title">My Home</span>
                 </label>
-                <label for="">
-                  <input type="checkbox">My Home
+                <label class="checkbox">
+                  <input type="checkbox"><span class="checkmark"></span><span class="checkbox-title">My Home</span>
                 </label>
-                <label for="">
-                  <input type="checkbox">My Home
+                <label class="checkbox">
+                  <input type="checkbox"><span class="checkmark"></span><span class="checkbox-title">My Home</span>
                 </label>
-                <label for="">
-                  <input type="checkbox">My Home
+                <label class="checkbox">
+                  <input type="checkbox"><span class="checkmark"></span><span class="checkbox-title">My Home</span>
                 </label>
               </div>
             </div>
             <div class="filter-filters">
-              <div class="filter-filters__title"> </div>
-              <h3>Filters</h3>
-              <div class="filter-item">
-                <div class="filter-item__title"> 
-                  <h4>Product brand</h4><img src="assets/img/arrow-black-down.svg" alt="">
+              <div class="filter-filters__title">
+                <h3>Filters</h3>
+              </div>
+              <div class="filter-filters__wrapper hidden">
+                <div class="filter-item">
+                  <div class="filter-item__title"> 
+                    <h4>Product brand</h4><img src="assets/img/arrow-black-down.svg" alt="">
+                  </div>
+                  <div class="filter-item__choose">
+                    <label class="checkbox">
+                      <input type="checkbox"><span class="checkmark"></span><span class="checkbox-title">RFS</span>
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox"><span class="checkmark"></span><span class="checkbox-title">Nokia</span>
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox"><span class="checkmark"></span><span class="checkbox-title">Rosenberger</span>
+                    </label>
+                  </div>
                 </div>
+                <div class="filter-item">
+                  <div class="filter-item__title"> 
+                    <h4>Product brand</h4><img src="assets/img/arrow-black-down.svg" alt="">
+                  </div>
+                  <div class="filter-item__choose">
+                    <label class="checkbox">
+                      <input type="checkbox"><span class="checkmark"></span><span class="checkbox-title">RFS</span>
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox"><span class="checkmark"></span><span class="checkbox-title">Nokia</span>
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox"><span class="checkmark"></span><span class="checkbox-title">Rosenberger</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="filter-item">
+                  <div class="filter-item__title"> 
+                    <h4>Product brand</h4><img src="assets/img/arrow-black-down.svg" alt="">
+                  </div>
+                  <div class="filter-item__choose">
+                    <label class="checkbox">
+                      <input type="checkbox"><span class="checkmark"></span><span class="checkbox-title">RFS</span>
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox"><span class="checkmark"></span><span class="checkbox-title">Nokia</span>
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox"><span class="checkmark"></span><span class="checkbox-title">Rosenberger</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="filter-item">
+                  <div class="filter-item__title"> 
+                    <h4>Product brand</h4><img src="assets/img/arrow-black-down.svg" alt="">
+                  </div>
+                  <div class="filter-item__choose">
+                    <label class="checkbox">
+                      <input type="checkbox"><span class="checkmark"></span><span class="checkbox-title">RFS</span>
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox"><span class="checkmark"></span><span class="checkbox-title">Nokia</span>
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox"><span class="checkmark"></span><span class="checkbox-title">Rosenberger</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="filter-item">
+                  <div class="filter-item__title"> 
+                    <h4>Product brand</h4><img src="assets/img/arrow-black-down.svg" alt="">
+                  </div>
+                  <div class="filter-item__choose">
+                    <label class="checkbox">
+                      <input type="checkbox"><span class="checkmark"></span><span class="checkbox-title">RFS</span>
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox"><span class="checkmark"></span><span class="checkbox-title">Nokia</span>
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox"><span class="checkmark"></span><span class="checkbox-title">Rosenberger</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="filter-item">
+                  <div class="filter-item__title"> 
+                    <h4>Product brand</h4><img src="assets/img/arrow-black-down.svg" alt="">
+                  </div>
+                  <div class="filter-item__choose">
+                    <label class="checkbox">
+                      <input type="checkbox"><span class="checkmark"></span><span class="checkbox-title">RFS</span>
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox"><span class="checkmark"></span><span class="checkbox-title">Nokia</span>
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox"><span class="checkmark"></span><span class="checkbox-title">Rosenberger</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="filter-item">
+                  <div class="filter-item__title"> 
+                    <h4>Product brand</h4><img src="assets/img/arrow-black-down.svg" alt="">
+                  </div>
+                  <div class="filter-item__choose">
+                    <label class="checkbox">
+                      <input type="checkbox"><span class="checkmark"></span><span class="checkbox-title">RFS</span>
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox"><span class="checkmark"></span><span class="checkbox-title">Nokia</span>
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox"><span class="checkmark"></span><span class="checkbox-title">Rosenberger</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="filter-filters__load">
+                <p>Load More Filters</p>
               </div>
             </div>
           </form>
+          <button type="submit" form="formId"> <span>Filter</span></button>
         </div>
         <div class="product-page__right">
-          <div class="product-page__sorting"></div>
-          <div class="product-page__container">
+          <div class="links"> <a href="">Home</a><a href="">Products</a><a href="">Antenas</a></div>
+          <div class="product-page__sorting sorting-block">
+            <p class="sorting-block__quantity"> <span>205</span>items</p>
+            <select class="sorting-block__select alphabet wide">
+              <option>By A-Z </option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+            <select class="sorting-block__select oem wide">
+              <option>OEM</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+            <select class="sorting-block__select price wide">
+              <option>By price </option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+            <div class="sorting-block__choose">
+              <div class="listing gril"><img src="assets/img/listing.svg" alt="">List</div>
+              <div class="grid gril active"><img src="assets/img/grid.svg" alt="">Grid</div>
+            </div>
+          </div>
+          <div class="product-page__container product-page__container--grid">
             <div class="products-slider__slide">
               <div class="green-new">New</div>
               <div class="slider-img"> <img src="assets/img/product-img.jpg" alt=""></div>
@@ -84,8 +225,9 @@
                 <div> <span>MODEL:</span><span> FBADE-LTE14-5m</span></div>
                 <div> <span>EAN/UPC:</span><span> 0708747435788</span></div>
                 <div class="slider-text__checkbox"> 
-                  <input type="checkbox" name="">
-                  <label>Compares</label>
+                  <label class="checkbox">
+                    <input type="checkbox" name="choose"><span class="checkmark"></span><span class="checkbox-title">Compares</span>
+                  </label>
                 </div>
               </div>
               <div class="slider-bottom"> 
@@ -96,6 +238,11 @@
                   <div class="addto-cart"> <span>Add to cart</span><img src="assets/img/basket.svg" alt=""></div>
                 </div>
                 <div class="slider-bottom__button">
+                  <div class="listing-checkbox">
+                    <label class="checkbox">
+                      <input type="checkbox" name="choose"><span class="checkmark"></span><span class="checkbox-title">Compares</span>
+                    </label>
+                  </div>
                   <div class="quick-view">Quick View</div>
                 </div>
               </div>
@@ -110,8 +257,9 @@
                 <div> <span>MODEL:</span><span> FBADE-LTE14-5m</span></div>
                 <div> <span>EAN/UPC:</span><span> 0708747435788</span></div>
                 <div class="slider-text__checkbox"> 
-                  <input type="checkbox" name="">
-                  <label>Compares</label>
+                  <label class="checkbox">
+                    <input type="checkbox" name="choose"><span class="checkmark"></span><span class="checkbox-title">Compares</span>
+                  </label>
                 </div>
               </div>
               <div class="slider-bottom"> 
@@ -122,6 +270,11 @@
                   <div class="addto-cart"> <span>Add to cart</span><img src="assets/img/basket.svg" alt=""></div>
                 </div>
                 <div class="slider-bottom__button">
+                  <div class="listing-checkbox">
+                    <label class="checkbox">
+                      <input type="checkbox" name="choose"><span class="checkmark"></span><span class="checkbox-title">Compares</span>
+                    </label>
+                  </div>
                   <div class="quick-view">Quick View</div>
                 </div>
               </div>
@@ -136,8 +289,9 @@
                 <div> <span>MODEL:</span><span> FBADE-LTE14-5m</span></div>
                 <div> <span>EAN/UPC:</span><span> 0708747435788</span></div>
                 <div class="slider-text__checkbox"> 
-                  <input type="checkbox" name="">
-                  <label>Compares</label>
+                  <label class="checkbox">
+                    <input type="checkbox" name="choose"><span class="checkmark"></span><span class="checkbox-title">Compares</span>
+                  </label>
                 </div>
               </div>
               <div class="slider-bottom"> 
@@ -148,6 +302,11 @@
                   <div class="addto-cart"> <span>Add to cart</span><img src="assets/img/basket.svg" alt=""></div>
                 </div>
                 <div class="slider-bottom__button">
+                  <div class="listing-checkbox">
+                    <label class="checkbox">
+                      <input type="checkbox" name="choose"><span class="checkmark"></span><span class="checkbox-title">Compares</span>
+                    </label>
+                  </div>
                   <div class="quick-view">Quick View</div>
                 </div>
               </div>
@@ -162,8 +321,9 @@
                 <div> <span>MODEL:</span><span> FBADE-LTE14-5m</span></div>
                 <div> <span>EAN/UPC:</span><span> 0708747435788</span></div>
                 <div class="slider-text__checkbox"> 
-                  <input type="checkbox" name="">
-                  <label>Compares</label>
+                  <label class="checkbox">
+                    <input type="checkbox" name="choose"><span class="checkmark"></span><span class="checkbox-title">Compares</span>
+                  </label>
                 </div>
               </div>
               <div class="slider-bottom"> 
@@ -174,6 +334,11 @@
                   <div class="addto-cart"> <span>Add to cart</span><img src="assets/img/basket.svg" alt=""></div>
                 </div>
                 <div class="slider-bottom__button">
+                  <div class="listing-checkbox">
+                    <label class="checkbox">
+                      <input type="checkbox" name="choose"><span class="checkmark"></span><span class="checkbox-title">Compares</span>
+                    </label>
+                  </div>
                   <div class="quick-view">Quick View</div>
                 </div>
               </div>
@@ -188,8 +353,9 @@
                 <div> <span>MODEL:</span><span> FBADE-LTE14-5m</span></div>
                 <div> <span>EAN/UPC:</span><span> 0708747435788</span></div>
                 <div class="slider-text__checkbox"> 
-                  <input type="checkbox" name="">
-                  <label>Compares</label>
+                  <label class="checkbox">
+                    <input type="checkbox" name="choose"><span class="checkmark"></span><span class="checkbox-title">Compares</span>
+                  </label>
                 </div>
               </div>
               <div class="slider-bottom"> 
@@ -200,6 +366,11 @@
                   <div class="addto-cart"> <span>Add to cart</span><img src="assets/img/basket.svg" alt=""></div>
                 </div>
                 <div class="slider-bottom__button">
+                  <div class="listing-checkbox">
+                    <label class="checkbox">
+                      <input type="checkbox" name="choose"><span class="checkmark"></span><span class="checkbox-title">Compares</span>
+                    </label>
+                  </div>
                   <div class="quick-view">Quick View</div>
                 </div>
               </div>
@@ -214,8 +385,9 @@
                 <div> <span>MODEL:</span><span> FBADE-LTE14-5m</span></div>
                 <div> <span>EAN/UPC:</span><span> 0708747435788</span></div>
                 <div class="slider-text__checkbox"> 
-                  <input type="checkbox" name="">
-                  <label>Compares</label>
+                  <label class="checkbox">
+                    <input type="checkbox" name="choose"><span class="checkmark"></span><span class="checkbox-title">Compares</span>
+                  </label>
                 </div>
               </div>
               <div class="slider-bottom"> 
@@ -226,6 +398,11 @@
                   <div class="addto-cart"> <span>Add to cart</span><img src="assets/img/basket.svg" alt=""></div>
                 </div>
                 <div class="slider-bottom__button">
+                  <div class="listing-checkbox">
+                    <label class="checkbox">
+                      <input type="checkbox" name="choose"><span class="checkmark"></span><span class="checkbox-title">Compares</span>
+                    </label>
+                  </div>
                   <div class="quick-view">Quick View</div>
                 </div>
               </div>
@@ -240,8 +417,9 @@
                 <div> <span>MODEL:</span><span> FBADE-LTE14-5m</span></div>
                 <div> <span>EAN/UPC:</span><span> 0708747435788</span></div>
                 <div class="slider-text__checkbox"> 
-                  <input type="checkbox" name="">
-                  <label>Compares</label>
+                  <label class="checkbox">
+                    <input type="checkbox" name="choose"><span class="checkmark"></span><span class="checkbox-title">Compares</span>
+                  </label>
                 </div>
               </div>
               <div class="slider-bottom"> 
@@ -252,10 +430,19 @@
                   <div class="addto-cart"> <span>Add to cart</span><img src="assets/img/basket.svg" alt=""></div>
                 </div>
                 <div class="slider-bottom__button">
+                  <div class="listing-checkbox">
+                    <label class="checkbox">
+                      <input type="checkbox" name="choose"><span class="checkmark"></span><span class="checkbox-title">Compares</span>
+                    </label>
+                  </div>
                   <div class="quick-view">Quick View</div>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="product-page__bottom"> 
+            <p class="items-onpage">Items on page: <span>205</span></p>
+            <div class="pag"> <a class="pag__block active">1</a><a class="pag__block">2</a><a class="pag__block">3</a><a class="pag__block">4</a><a class="pag__block"><img src="assets/img/arrow-black-right.svg" alt=""></a></div>
           </div>
         </div>
       </section><a class="consultation"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><defs><style>.a{fill:rgba(32,32,32,0.87);}</style></defs><path class="a" d="M14,8H8v6H6V8H0V6H6V0H8V6h6Z"/></svg><span>consultation</span></a>
@@ -271,8 +458,10 @@
         <div class="footer__button"> <a href="#mainSlider"> <img src="assets/img/white-arrow-up.png" alt=""></a></div>
         <div class="footer__socials"> <a href=""><img src="assets/img/facebook.svg" alt=""></a><a href=""><img src="assets/img/insta.svg" alt=""></a><a href=""><img src="assets/img/twitter.svg" alt=""></a><a href=""><img src="assets/img/Polygon 84.svg" alt=""></a></div>
       </div>
-    </footer>
+    </footer><script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/productPage.js"></script>
   </body>
 </html>

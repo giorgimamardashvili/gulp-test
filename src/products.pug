@@ -66,39 +66,196 @@ html(lang="en")
         include layout/_header
         main
             section.product-page.container
+                .links 
+                        a(href="") Home
+                        a(href="") Products
+                        a(href="") Antenas
                 .product-page__left
                     h2 Products
-                    form(action="").product-page__filters
+                    form(action="" id="formId").product-page__filters
                         .filter-categories 
                             .filter-categories__title 
                                 h3 Categories
                             .filter-categories__choose 
-                                label(for="")
+                                label(class="checkbox")
+                                    input(type="checkbox" name='choose')
+                                    span.checkmark
+                                    span.checkbox-title My Home
+                                label(class="checkbox")
                                     input(type="checkbox")
-                                    | My Home
-                                label(for="")
+                                    span.checkmark
+                                    span.checkbox-title My Home
+                                label(class="checkbox")
                                     input(type="checkbox")
-                                    | My Home
-                                label(for="")
+                                    span.checkmark
+                                    span.checkbox-title My Home
+                                label(class="checkbox")
                                     input(type="checkbox")
-                                    | My Home
-                                label(for="")
+                                    span.checkmark
+                                    span.checkbox-title My Home
+                                label(class="checkbox")
                                     input(type="checkbox")
-                                    | My Home
-                                label(for="")
-                                    input(type="checkbox")
-                                    | My Home
+                                    span.checkmark
+                                    span.checkbox-title My Home
                         .filter-filters
-                            .filter-filters__title 
-                            h3 Filters
-                            .filter-item
-                                .filter-item__title 
-                                    h4 Product brand
-                                    img(src="assets/img/arrow-black-down.svg", alt="")
-
+                            .filter-filters__title
+                                h3 Filters
+                            .filter-filters__wrapper.hidden
+                                .filter-item
+                                    .filter-item__title 
+                                        h4 Product brand
+                                        img(src="assets/img/arrow-black-down.svg", alt="")
+                                    .filter-item__choose
+                                        label(class="checkbox")
+                                            input(type="checkbox")
+                                            span.checkmark
+                                            span.checkbox-title RFS
+                                        label(class="checkbox")
+                                            input(type="checkbox")
+                                            span.checkmark
+                                            span.checkbox-title Nokia
+                                        label(class="checkbox")
+                                            input(type="checkbox")
+                                            span.checkmark
+                                            span.checkbox-title Rosenberger
+                                .filter-item
+                                    .filter-item__title 
+                                        h4 Product brand
+                                        img(src="assets/img/arrow-black-down.svg", alt="")
+                                    .filter-item__choose
+                                        label(class="checkbox")
+                                            input(type="checkbox")
+                                            span.checkmark
+                                            span.checkbox-title RFS
+                                        label(class="checkbox")
+                                            input(type="checkbox")
+                                            span.checkmark
+                                            span.checkbox-title Nokia
+                                        label(class="checkbox")
+                                            input(type="checkbox")
+                                            span.checkmark
+                                            span.checkbox-title Rosenberger
+                                .filter-item
+                                    .filter-item__title 
+                                        h4 Product brand
+                                        img(src="assets/img/arrow-black-down.svg", alt="")
+                                    .filter-item__choose
+                                        label(class="checkbox")
+                                            input(type="checkbox")
+                                            span.checkmark
+                                            span.checkbox-title RFS
+                                        label(class="checkbox")
+                                            input(type="checkbox")
+                                            span.checkmark
+                                            span.checkbox-title Nokia
+                                        label(class="checkbox")
+                                            input(type="checkbox")
+                                            span.checkmark
+                                            span.checkbox-title Rosenberger
+                                .filter-item
+                                    .filter-item__title 
+                                        h4 Product brand
+                                        img(src="assets/img/arrow-black-down.svg", alt="")
+                                    .filter-item__choose
+                                        label(class="checkbox")
+                                            input(type="checkbox")
+                                            span.checkmark
+                                            span.checkbox-title RFS
+                                        label(class="checkbox")
+                                            input(type="checkbox")
+                                            span.checkmark
+                                            span.checkbox-title Nokia
+                                        label(class="checkbox")
+                                            input(type="checkbox")
+                                            span.checkmark
+                                            span.checkbox-title Rosenberger
+                                .filter-item
+                                    .filter-item__title 
+                                        h4 Product brand
+                                        img(src="assets/img/arrow-black-down.svg", alt="")
+                                    .filter-item__choose
+                                        label(class="checkbox")
+                                            input(type="checkbox")
+                                            span.checkmark
+                                            span.checkbox-title RFS
+                                        label(class="checkbox")
+                                            input(type="checkbox")
+                                            span.checkmark
+                                            span.checkbox-title Nokia
+                                        label(class="checkbox")
+                                            input(type="checkbox")
+                                            span.checkmark
+                                            span.checkbox-title Rosenberger
+                                .filter-item
+                                    .filter-item__title 
+                                        h4 Product brand
+                                        img(src="assets/img/arrow-black-down.svg", alt="")
+                                    .filter-item__choose
+                                        label(class="checkbox")
+                                            input(type="checkbox")
+                                            span.checkmark
+                                            span.checkbox-title RFS
+                                        label(class="checkbox")
+                                            input(type="checkbox")
+                                            span.checkmark
+                                            span.checkbox-title Nokia
+                                        label(class="checkbox")
+                                            input(type="checkbox")
+                                            span.checkmark
+                                            span.checkbox-title Rosenberger
+                                .filter-item
+                                    .filter-item__title 
+                                        h4 Product brand
+                                        img(src="assets/img/arrow-black-down.svg", alt="")
+                                    .filter-item__choose
+                                        label(class="checkbox")
+                                            input(type="checkbox")
+                                            span.checkmark
+                                            span.checkbox-title RFS
+                                        label(class="checkbox")
+                                            input(type="checkbox")
+                                            span.checkmark
+                                            span.checkbox-title Nokia
+                                        label(class="checkbox")
+                                            input(type="checkbox")
+                                            span.checkmark
+                                            span.checkbox-title Rosenberger
+                            .filter-filters__load
+                                p Load More Filters
+                    button(type="submit" form="formId") 
+                        span Filter
                 .product-page__right
-                    .product-page__sorting
-                    .product-page__container
+                    .links 
+                        a(href="") Home
+                        a(href="") Products
+                        a(href="") Antenas
+                    .product-page__sorting.sorting-block
+                        p.sorting-block__quantity 
+                            span 205
+                            | items
+                        select.sorting-block__select.alphabet.wide
+                            option By A-Z 
+                            option 1
+                            option 2
+                            option 3
+                        select.sorting-block__select.oem.wide
+                            option OEM
+                            option 1
+                            option 2
+                            option 3
+                        select.sorting-block__select.price.wide
+                            option By price 
+                            option 1
+                            option 2
+                            option 3
+                        .sorting-block__choose
+                            .listing.gril
+                                img(src="assets/img/listing.svg", alt="")
+                                | List
+                            .grid.gril.active
+                                img(src="assets/img/grid.svg", alt="")
+                                | Grid
+                    .product-page__container.product-page__container--grid
                         each product, i in products 
                              .products-slider__slide
                                     .green-new New
@@ -117,8 +274,10 @@ html(lang="en")
                                             span EAN/UPC:
                                             span= " " + product.ean
                                         .slider-text__checkbox 
-                                            input(type="checkbox", name="")
-                                            label Compares
+                                            label(class="checkbox")
+                                                    input(type="checkbox" name='choose')
+                                                    span.checkmark
+                                                    span.checkbox-title Compares
                                     .slider-bottom 
                                         .slider-bottom__info
                                             .price 
@@ -128,9 +287,27 @@ html(lang="en")
                                                 span Add to cart
                                                 img(src="assets/img/basket.svg", alt="")
                                         .slider-bottom__button
+                                            .listing-checkbox
+                                                label(class="checkbox")
+                                                    input(type="checkbox" name='choose')
+                                                    span.checkmark
+                                                    span.checkbox-title Compares
                                             .quick-view Quick View
-
+                    .product-page__bottom 
+                        p.items-onpage Items on page: 
+                            span 205
+                        .pag 
+                            a.pag__block.active 1
+                            a.pag__block 2
+                            a.pag__block 3
+                            a.pag__block 4
+                            a.pag__block
+                                img(src="assets/img/arrow-black-right.svg", alt="")
+                            
             include layout/_consultation
         include layout/_footer
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         script(src='assets/js/swiper-bundle.min.js')
+        script(src='assets/js/jquery.nice-select.min.js')
         script(src='assets/js/main.js')
+        script(src='assets/js/productPage.js')

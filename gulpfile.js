@@ -23,7 +23,7 @@ function fontsTasks() {
 }
 
 function scripts() {
-  return src(["src/assets/js/main.js", "src/assets/js/burger.js"])
+  return src("src/assets/js/*.js")
     .pipe(uglify())
     .pipe(dest("dist/assets/js"))
     .pipe(browserSync.stream());
