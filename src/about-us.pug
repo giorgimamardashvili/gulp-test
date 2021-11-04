@@ -1,0 +1,35 @@
+
+doctype html
+html(lang="en")
+    head
+        include layout/_head
+    body 
+        include layout/_header
+        main
+            section.about-us 
+                .about-us__top.container
+                    .links
+                        a(href="index.html") Home
+                        a About Us 
+                .about-us__about.about-block
+                    .about-block__text
+                        h2 About Us
+                        p.
+                            Welcome to Netframe, your number one source for all things product. We're dedicated to giving you the very best of product, with a focus on store characteristic 1, store characteristic 2, store characteristic 3.
+                            Founded in 2000 year by Founder Name, Netframe has come a long way from its beginnings in starting location. When Founder Name first started out, his passion for  "eco-friendly cleaning products"drove them to action: quit day job, do tons of research, etc. so that Netframe can offer you  "the world's most advanced toothbrush". We now serve customers all over  the world, and are thrilled that we're able to turn our passion into our own website.
+                        .block-infos 
+                            .block-info 
+                                h3 35
+                                span Number of Employees
+                            .block-info 
+                                h3 35
+                                span Number of Employees
+                            .block-info 
+                                h3 35
+                                span Number of Employees
+                    .about-block__img
+                        img(src="assets/img/about-us-img1.jpg", alt="")
+            include layout/_consultation
+        include layout/_footer
+
+        script(src='assets/js/aboutUs.js')

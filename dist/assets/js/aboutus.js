@@ -1,0 +1,1 @@
+function resizeBlockItems(){[...document.querySelector(".block-infos").children].forEach((e=>{let o=e.offsetWidth;e.style.height=`${o}px`,console.log(e)}))}window.addEventListener("resize",(()=>{resizeBlockItems()})),resizeBlockItems();

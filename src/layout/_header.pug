@@ -6,7 +6,7 @@
         }, 
         {
             title: 'About us',
-            link: ""
+            link: "about-us"
         }, 
         {
             title: 'Services',
@@ -49,14 +49,25 @@ header.header
                                 li
                                     a(href= val.link + '.html')= val.title
                 .header__right
-                    .header__search.headers-info
-                        img(src="assets/img/search.svg", alt="")
-                    a.header__login.headers-info
-                        img(src="assets/img/user-line.svg", alt="")
-                    .header__basket.headers-info
-                        img(src="assets/img/basket.svg", alt="")
-                    .header__lang.headers-info
-                        a(href="#") Eng
+                    if isCur
+                        .header__curr USD ($)
+                        .header__search.headers-info
+                            img(src="assets/img/search.svg", alt="")
+                        a.header__login.headers-info
+                            img(src="assets/img/user-line.svg", alt="")
+                        .header__basket.headers-info
+                            img(src="assets/img/basket.svg", alt="")
+                        .header__lang.headers-info
+                            a(href="#") Eng
+                    else 
+                        .header__search.headers-info
+                            img(src="assets/img/search.svg", alt="")
+                        a.header__login.headers-info
+                            img(src="assets/img/user-line.svg", alt="")
+                        .header__basket.headers-info
+                            img(src="assets/img/basket.svg", alt="")
+                        .header__lang.headers-info
+                            a(href="#") Eng
 
 
             

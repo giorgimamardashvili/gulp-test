@@ -10,6 +10,8 @@
     margin-bottom: 30px;
   }
   .links {
+    position: absolute;
+
     display: none;
     left: 16px;
     top: -30px;
@@ -80,6 +82,12 @@
   }
   .filter-categories {
     &__title {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      @include tab {
+        cursor: pointer;
+      }
       h3 {
         font-size: 22px;
         color: $black;
@@ -92,6 +100,13 @@
           background: transparent;
           background-color: #f1f1f1;
           margin: 15px 0;
+        }
+      }
+      img {
+        display: none;
+        @include tab {
+          display: block;
+          margin-top: 10px;
         }
       }
     }
@@ -117,6 +132,12 @@
   }
   .filter-filters {
     &__title {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      @include tab {
+        cursor: pointer;
+      }
       h3 {
         font-size: 22px;
         color: $black;
@@ -129,6 +150,13 @@
           background: transparent;
           background-color: #f1f1f1;
           margin: 15px 0;
+        }
+      }
+      img {
+        display: none;
+        @include tab {
+          display: block;
+          margin-top: 10px;
         }
       }
     }
@@ -207,6 +235,8 @@
       width: 100%;
     }
     .links {
+      position: absolute;
+
       display: flex;
       left: 0;
       top: -70px;
@@ -278,6 +308,8 @@
       }
       span {
         color: rgba($color: $black, $alpha: 0.7);
+        position: relative;
+        bottom: 3px;
       }
       .list {
         margin-top: 0;
@@ -480,59 +512,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include sm {
+      flex-direction: column;
+    }
 
     .items-onpage {
       font-size: 14px;
       opacity: 0.8;
-    }
-  }
-}
-.pag {
-  display: flex;
-  &__block {
-    width: 40px;
-    height: 40px;
-    border-radius: 4px;
-    background: transparent;
-    border: 1px solid #ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 15px;
-    cursor: pointer;
-
-    &:hover {
-      background: $green;
-      color: white;
-    }
-    &.active {
-      background: $green;
-      color: white;
-    }
-  }
-}
-.links {
-  position: absolute;
-
-  display: flex;
-
-  a {
-    font-size: 14px;
-    margin-right: 20px;
-    position: relative;
-
-    &:not(:first-child) {
-      &::before {
-        content: "";
-        width: 3px;
-        height: 3px;
-        background: #202020;
-        opacity: 0.8;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: -10px;
-        border-radius: 50%;
+      @include sm {
+        margin-bottom: 30px;
+        align-self: flex-start;
       }
     }
   }

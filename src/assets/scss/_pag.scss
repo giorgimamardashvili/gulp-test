@@ -1,0 +1,27 @@
+.pag {
+  display: flex;
+  &__block {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background: transparent;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:not(:first-child) {
+      margin-left: 15px;
+    }
+
+    &:hover {
+      background: $green;
+      color: white;
+    }
+    &.active {
+      background: $green;
+      color: white;
+    }
+  }
+}
