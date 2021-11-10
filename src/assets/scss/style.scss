@@ -21,6 +21,9 @@
 html {
   scroll-behavior: smooth;
 }
+body {
+  overflow-x: hidden;
+}
 
 .container {
   // max-width: 1920px;
@@ -54,5 +57,6 @@ h4 {
 @import "become-partner";
 @import "product-page";
 @import "about-us";
+@import "support";
 @import "consultation";
 @import "footer";

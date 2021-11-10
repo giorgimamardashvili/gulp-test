@@ -58,6 +58,7 @@
         },
     ]
 - const isCur = true
+- const scrollToTop = `#productPage`
 
 doctype html
 html(lang="en")
@@ -66,7 +67,7 @@ html(lang="en")
     body 
         include layout/_header
         main
-            section.product-page.container
+            section.product-page.container(id='productPage')
                 .links 
                         a(href="") Home
                         a(href="") Products
@@ -294,7 +295,7 @@ html(lang="en")
                                                 label(class="checkbox")
                                                     input(type="checkbox" name='choose')
                                                     span.checkmark
-                                                    span.checkbox-title Compares
+                                                    span.checkbox-title Compare
                                             .quick-view Quick View
                     .product-page__bottom 
                         p.items-onpage Items on page: 

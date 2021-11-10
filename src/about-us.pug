@@ -1,3 +1,4 @@
+- const scrollToTop = `#aboutUs`
 
 doctype html
 html(lang="en")
@@ -6,7 +7,7 @@ html(lang="en")
     body 
         include layout/_header
         main
-            section.about-us 
+            section.about-us(id='aboutUs')
                 .about-us__top.container
                     .links
                         a(href="index.html") Home
@@ -29,7 +30,39 @@ html(lang="en")
                                 span Number of Employees
                     .about-block__img
                         img(src="assets/img/about-us-img1.jpg", alt="")
+                    h2 About Us
+                .about-us__more.more-block.container
+                    h2.mob-title Our Vision and Mission
+                    .more-block__img
+                        img(src="assets/img/Group 3427.jpg", alt="")
+                    .more-block__text
+                        h2 Our Vision and Mission
+                        h3 Vision
+                        p.
+                            We strive to anticipate the technological needs of our clients and provide leadership to 
+                            create innovative and cost-effective solutions. 
+                        h3  Mission
+                        p.
+                            Be recognised for fast, agile and efficient delivery of exclusive services. Continue to be a centre of excellence for design and solutions implementation. To create an excellent place to work and self-development
+                .about-us__more.more-block.container.more-block--reverse
+                    h2.mob-title Due Diligence
+                    .more-block__img
+                        img(src="assets/img/Group 3427.jpg", alt="")
+                    .more-block__text.more-block__text--reverse
+                        h2 Due Diligence
+                        p.
+                            We strive to anticipate the technological needs of our clients and provide leadership to 
+                            create innovative and cost-effective solutions. 
+                .about-us__more.more-block.container
+                    h2.mob-title Health and Safety
+                    .more-block__img
+                        img(src="assets/img/Group 3427.jpg", alt="")
+                    .more-block__text
+                        h2 Health and Safety
+                        p.
+                            We strive to anticipate the technological needs of our clients and provide leadership to 
+                            create innovative and cost-effective solutions.
             include layout/_consultation
         include layout/_footer
 
-        script(src='assets/js/aboutUs.js')
+        script(src='assets/js/aboutus.js')
