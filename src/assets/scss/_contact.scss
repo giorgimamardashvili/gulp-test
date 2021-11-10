@@ -1,0 +1,12 @@
+.contact {
+  margin-top: 125px;
+  @include tab {
+    margin-top: 95px;
+  }
+  &__top {
+    margin: 0 0 90px 0;
+    @include tab {
+      margin: 0 0 30px 0;
+    }
+  }
+}

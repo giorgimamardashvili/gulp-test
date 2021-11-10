@@ -1,0 +1,17 @@
+- const scrollToTop = `#contact`
+
+doctype html
+html(lang="en")
+    head
+        include layout/_head
+    body 
+        include layout/_header
+        main
+            section.contact.container(id='contact')
+                .contact__top
+                    .links
+                        a(href="index.html") Home
+                        a support
+                include layout/_consultation
+        include layout/_footer
+
