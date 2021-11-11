@@ -261,7 +261,7 @@ html(lang="en")
                                 | Grid
                     .product-page__container.product-page__container--grid
                         each product, i in products 
-                             .products-slider__slide
+                             a(href='product-inside.html').products-slider__slide
                                     .green-new New
                                     .slider-img 
                                         img(src=product.image, alt="")

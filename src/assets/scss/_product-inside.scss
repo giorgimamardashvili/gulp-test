@@ -1,0 +1,237 @@
+.product-inside {
+  margin-top: 100px;
+  &__top {
+    padding: 30px 0 45px 0;
+  }
+  .back {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+  &__product {
+    display: flex;
+    margin-right: 8%;
+    margin-bottom: 110px;
+    @include lg {
+      margin-right: 0;
+    }
+    @include tab {
+      flex-direction: column;
+    }
+  }
+  &__button {
+    width: 150px;
+    margin: 0 auto;
+    height: 35px;
+    margin-bottom: 60px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 50vw;
+      height: 1px;
+      background-color: $blue;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -50vw;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 50vw;
+      height: 1px;
+      background-color: $blue;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -50vw;
+    }
+  }
+}
+
+.product-info {
+  &__imgblock {
+    width: 45%;
+    flex-shrink: 0;
+    @include tab {
+      width: 100%;
+    }
+    .main-img {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-top: 85%;
+      img {
+        position: absolute;
+        object-fit: contain;
+        top: 0;
+      }
+    }
+    span {
+      display: block;
+      opacity: 0.7;
+      margin: 15px auto;
+      text-align: center;
+    }
+    .thumb-imgs {
+      display: flex;
+      justify-content: center;
+
+      li {
+        width: 12%;
+        height: 0;
+        padding-top: 12%;
+        position: relative;
+        border: 0.5px solid #ccc;
+        margin: 0 1%;
+
+        &.active {
+          border: 0.5px solid $blue;
+        }
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    @include tab {
+      margin: 0;
+    }
+    h1 {
+      font-size: clamp(20px, 1.9vw, 36px);
+      margin-bottom: 20px;
+    }
+    .price {
+      color: $green;
+      font-size: 28px;
+      font-family: "bold";
+      display: block;
+      margin-bottom: 40px;
+      line-height: 28px;
+      @include lg {
+        margin-bottom: 20px;
+      }
+
+      span {
+        font-size: inherit;
+        color: inherit;
+        font-family: inherit;
+      }
+    }
+    .input-blocks {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+      @include lg {
+        margin-bottom: 20px;
+      }
+
+      &::after {
+        content: "";
+        width: 1px;
+        height: 40px;
+        background-color: #ccc;
+        order: 1;
+        margin: 0 40px;
+      }
+
+      .addtocart {
+        width: 300px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $blue;
+        border-radius: 8px;
+        order: 0;
+      }
+      .checkbox {
+        order: 2;
+      }
+    }
+    h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    p {
+      color: #999;
+      font-size: 17px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      line-height: 16px; /* fallback */
+      max-height: 80px; /* fallback */
+      -webkit-line-clamp: 5; /* number of lines to show */
+      -webkit-box-orient: vertical;
+    }
+    .data-sheet {
+      margin-top: auto;
+      h4 {
+        font-size: 17px;
+        margin-bottom: 15px;
+      }
+      .pdfs {
+        display: flex;
+        align-items: center;
+        a {
+          width: 120px;
+          height: 40px;
+          background: transparent;
+          border: 1px solid #ccc;
+          margin-right: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            margin-right: 7px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.descriptions {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  grid-gap: 15px;
+  padding-bottom: 35px;
+  h2 {
+    font-size: 20px;
+    margin-bottom: 50px;
+    @include tab {
+      font-size: 17px;
+    }
+  }
+  &__spec {
+    table,
+    td {
+      border: 1px solid #ccc;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      tr {
+        td {
+          padding: 13px;
+          &:nth-child(2) {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+  &__desc {
+    p {
+      color: #999;
+    }
+  }
+}

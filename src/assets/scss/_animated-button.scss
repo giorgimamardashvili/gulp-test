@@ -1,0 +1,30 @@
+.animated-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  &:hover {
+    .around {
+      width: 100%;
+    }
+    span {
+      color: $blue;
+    }
+  }
+  span {
+    display: block;
+    width: fit-content;
+    z-index: 1;
+    position: relative;
+    background: white;
+  }
+  .around {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border: 3px solid $blue;
+  }
+}
