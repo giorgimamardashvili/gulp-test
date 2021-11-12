@@ -1,5 +1,63 @@
 - const scrollToTop = `#product-inside`
-
+-
+    const products = [
+        {
+            title: 'OEM 4G 14dBi Panel Antenna',
+            image: 'assets/img/product-img.jpg',
+            price: 88,
+            brand: "OEM",
+            model: 'FBADE-LTE14-5m',
+            ean: '0708747435788'
+        },
+        {
+            title: 'OEM 4G 14dBi Panel Antenna',
+            image: 'assets/img/product-img.jpg',
+            price: 88,
+            brand: "OEM",
+            model: 'FBADE-LTE14-5m',
+            ean: '0708747435788'
+        },
+        {
+            title: 'OEM 4G 14dBi Panel Antenna',
+            image: 'assets/img/product-img.jpg',
+            price: 88,
+            brand: "OEM",
+            model: 'FBADE-LTE14-5m',
+            ean: '0708747435788'
+        },
+        {
+            title: 'OEM 4G 14dBi Panel Antenna',
+            image: 'assets/img/product-img.jpg',
+            price: 88,
+            brand: "OEM",
+            model: 'FBADE-LTE14-5m',
+            ean: '0708747435788'
+        },
+        {
+            title: 'OEM 4G 14dBi Panel Antenna',
+            image: 'assets/img/product-img.jpg',
+            price: 88,
+            brand: "OEM",
+            model: 'FBADE-LTE14-5m',
+            ean: '0708747435788'
+        },
+        {
+            title: 'OEM 4G 14dBi Panel Antenna',
+            image: 'assets/img/product-img.jpg',
+            price: 88,
+            brand: "OEM",
+            model: 'FBADE-LTE14-5m',
+            ean: '0708747435788'
+        },
+        {
+            title: 'OEM 4G 14dBi Panel Antenna',
+            image: 'assets/img/product-img.jpg',
+            price: 88,
+            brand: "OEM",
+            model: 'FBADE-LTE14-5m',
+            ean: '0708747435788'
+        },
+    ]
 doctype html
 html(lang="en")
     head
@@ -12,9 +70,10 @@ html(lang="en")
                     .links
                         a(href="index.html") Home
                         a(href="products.html") Products
-                        a QuWireless QuRJ45 Outdoor...
+                        a QuWireless QuRJ45...
                 a.back Back to products
                 .product-inside__product.product-info
+                    h1 QuWireless QuRJ45 Outdoor IP68 RJ45 Socket Adapter, 38cm (QRJ45-L)
                     .product-info__imgblock
                         .main-img(style="background: url('assets/img/product-inside-img.png') center center/contain no-repeat") 
                         span Click image to open expanded view
@@ -22,7 +81,7 @@ html(lang="en")
                             li.active
                                 img(src="assets/img/product-inside-img.png", alt="")
                             li
-                                img(src="assets/img/product-inside-img.png", alt="")
+                                img(src="assets/img/product-img.jpg", alt="")
                             li
                                 img(src="assets/img/product-inside-img.png", alt="")
                             li
@@ -35,7 +94,12 @@ html(lang="en")
                                 img(src="assets/img/product-inside-img.png", alt="")
                     .product-info__text 
                         h1 QuWireless QuRJ45 Outdoor IP68 RJ45 Socket Adapter, 38cm (QRJ45-L)
-                        p.price $<span>25.00</span>
+                        .hidden-compare
+                            label.checkbox
+                                input(type="checkbox" name="choose")
+                                span.checkmark
+                                span.checkbox-title Compare
+                            p.price $<span>25.00</span>
                         .input-blocks
                             .addtocart add to cart
                             label.checkbox
@@ -46,6 +110,7 @@ html(lang="en")
                         p.
                             The ShareLite FD9R6004 Series of diplexers are designed to enable feeder sharing between systems in the 698-960 MHz range and in the 1710-2200 MHz range, including all the new AWS-3 paired spectrum blocks (G, H, I, J).. The diplexer is equipped with in-line connector placement so it can be installed in the BTS cabinet or at the tower top. This is especially valuable in crowded sites or when the feeders are not easily accessible. Due to its wideband design, the FD9R6004 Series can accommodate many combining solutions between 698-960 MHz and 1710-2200 MHz systems such as LTE 700 MHz, Cellular 800 MHz with PCS, GSM900 with GSM1800, or GSM900 with UMTS. This diplexer features a highly selective filter.
                         .data-sheet 
+                            hr
                             h4 Data Sheet
                             .pdfs 
                                 a(href="")
@@ -92,9 +157,68 @@ html(lang="en")
 
                             It can easily cover a distance of 800 meters and reach fiber-like speed. The Сube form-factor has been designed with function and durability in mind. And it attracts less unwanted attention due to its size and shape. The box includes two Cube 60G ac devices that are already paired together, power supplies, PoE injectors and mounting kits for both devices.
                 .animated-button.product-inside__button
-                    span View less
+                    span View More
                     div.around
-
-                include layout/_consultation
+            section.products-slider.standart-slider.container#productSlider
+                .standart-slider__top
+                    h3 Related Products
+                    .mobile-buttons
+                        .swiper-button-prev.main-slider__prev.button.products-slider__prev
+                        .swiper-button-next.main-slider__next.button.products-slider__next 
+                .standart-slider__bottom
+                    .swiper.products-slider__swiper
+                        .swiper-wrapper
+                            each product, i in products
+                                .swiper-slide.products-slider__slide.productin-slide
+                                    .green-new New
+                                    .slider-img 
+                                        img(src=product.image, alt="")
+                                    .slider-text 
+                                        h4=product.title
+                                        p=product.title
+                                        div 
+                                            span BRAND:
+                                            span= " " + product.brand
+                                        div 
+                                            span MODEL:
+                                            span= " " + product.model
+                                        div 
+                                            span EAN/UPC:
+                                            span= " " + product.ean
+                                        .slider-text__checkbox 
+                                            label.checkbox
+                                                input(type="checkbox" name="choose")
+                                                span.checkmark
+                                                span.checkbox-title Compare
+                                    .slider-bottom 
+                                        .slider-bottom__info
+                                            .price 
+                                                    p price:  
+                                                    span= `${product.price}$`
+                                            .addto-cart 
+                                                span Add to cart
+                                                img(src="assets/img/basket.svg", alt="")
+                                        .slider-bottom__button
+                                            .quick-view Quick View
+                    .swiper-button-prev.button.products-slider__prev
+                    .swiper-button-next.button.products-slider__next
+            section.modal-imgs.container
+                .modal-imgs__wrapper
+                    .modal-imgs__close
+                        img(src="assets/img/close.png", alt="")
+                    .modal-imgs__container.swiper
+                        .swiper-wrapper
+                            img.swiper-slide(src="assets/img/product-inside-img.png", alt="")
+                            img.swiper-slide(src="assets/img/product-img.jpg", alt="")
+                            img.swiper-slide(src="assets/img/product-inside-img.png", alt="")
+                            img.swiper-slide(src="assets/img/product-inside-img.png", alt="")
+                            img.swiper-slide(src="assets/img/product-inside-img.png", alt="")
+                            img.swiper-slide(src="assets/img/product-inside-img.png", alt="")
+                            img.swiper-slide(src="assets/img/product-inside-img.png", alt="")
+                        .swiper-button-prev.modal-imgs__prev.button
+                        .swiper-button-next.modal-imgs__next.button
+        include layout/_consultation
         include layout/_footer
+        script(src='assets/js/swiper-bundle.min.js')
+        script(src='assets/js/productin.js')
 

@@ -6,6 +6,17 @@
     margin-right: 20px;
     position: relative;
 
+    &::after {
+      content: "";
+      width: 0%;
+      height: 3px;
+      left: 0;
+      bottom: -2px;
+      position: absolute;
+      background-color: rgba($black, 0.8);
+      transition: width 0.3s;
+    }
+
     &:not(:first-child) {
       &::before {
         content: "";
@@ -18,6 +29,14 @@
         transform: translateY(-50%);
         left: -10px;
         border-radius: 50%;
+      }
+    }
+    &:not(:last-child) {
+      opacity: 0.8;
+      &:hover {
+        &::after {
+          width: 100%;
+        }
       }
     }
   }
