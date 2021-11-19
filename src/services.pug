@@ -1,0 +1,18 @@
+- const scrollToTop = `#services`
+
+doctype html
+html(lang="en")
+    head
+        include layout/_head
+    body 
+        include layout/_header
+        main
+            section.services.container(id='services')
+                .services__top
+                    .links
+                        a(href="index.html") Home
+                        a Services
+                .services__
+        include layout/_consultation
+        include layout/_footer
+
