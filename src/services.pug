@@ -1,5 +1,33 @@
 - const scrollToTop = `#services`
 
+- 
+    const itemsInfo = [
+        {
+            img1: 'assets/img/services-img1.jpg',
+            img2: 'assets/img/services-img2.jpg',
+            title1: 'Energy Management',
+            title2: 'Telecommunication Towers Installation',
+            color1: '#00cbff',
+            color2: '#65ccae',
+        },
+        {
+            img1: 'assets/img/services-img3.jpg',
+            img2: 'assets/img/services-img4.jpg',
+            title1: 'Steel and Civil Work',
+            title2: 'Transmission Network',
+            color1: '#f37a2c',
+            color2: '#65ccae',
+        },
+        {
+            img1: 'assets/img/services-img5.jpg',
+            img2: 'assets/img/services-img6.jpg',
+            title1: 'Fiber Optic Cable infrastructure development and support',
+            title2: 'Performance Monitoring and Optimisation',
+            color1: '#00cbff',
+            color2: '#f37a2c',
+        },
+    ]
+
 doctype html
 html(lang="en")
     head
@@ -12,7 +40,29 @@ html(lang="en")
                     .links
                         a(href="index.html") Home
                         a Services
-                .services__
+                .services__items
+                    each val in itemsInfo
+                        .item 
+                            .item__left 
+                                .text 
+                                    h2=val.title1
+                                    a.animated-button.text__button(href="" style=`color: ${val.color1}`)
+                                        span Wiev more 
+                                        .around(style=`border: 3px solid ${val.color1}`)
+                                    .text__hover
+                                        span
+                            .item__right 
+                                img(src=val.img1, alt="")
+                        .item.item--reverse
+                            .item__left 
+                                .text 
+                                    h2=val.title2
+                                    a.animated-button.text__button(href="" style=`color: ${val.color2}`)
+                                        span Wiev more 
+                                        .around(style=`border: 3px solid ${val.color2}`)
+                                    
+                            .item__right 
+                                img(src=val.img2, alt="")
         include layout/_consultation
         include layout/_footer
 
