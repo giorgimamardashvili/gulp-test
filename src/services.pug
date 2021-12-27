@@ -42,17 +42,19 @@ html(lang="en")
                         a Services
                 .services__items
                     each val in itemsInfo
-                        .item 
+                        .item
                             .item__left 
                                 .text 
                                     h2=val.title1
                                     a.animated-button.text__button(href="" style=`color: ${val.color1}`)
                                         span Wiev more 
                                         .around(style=`border: 3px solid ${val.color1}`)
-                                    .text__hover
-                                        span
+                                    .text__hover.ui-box.top-rightStart-backward(style=`--color:${val.color1}`)
+                                        span.ui-border-element
                             .item__right 
                                 img(src=val.img1, alt="")
+                            h2.hidden=val.title1
+                            .hidden-container
                         .item.item--reverse
                             .item__left 
                                 .text 
@@ -60,9 +62,17 @@ html(lang="en")
                                     a.animated-button.text__button(href="" style=`color: ${val.color2}`)
                                         span Wiev more 
                                         .around(style=`border: 3px solid ${val.color2}`)
-                                    
+                                    .text__hover.ui-box.top-leftStart-backward(style=`--color:${val.color2}`)
+                                        span.ui-border-element
                             .item__right 
                                 img(src=val.img2, alt="")
+                            h2.hidden=val.title2
+                            .hidden-container
+                    a.services__button.animated-button
+                        span View more services
+                        .around
         include layout/_consultation
         include layout/_footer
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        script(src='assets/js/servicesPage.js')
 
