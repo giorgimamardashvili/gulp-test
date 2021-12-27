@@ -27,10 +27,18 @@ const swiperMain = new Swiper(".solutions__container .swiper", {
     prevEl: ".solutions__container .swiper-button-prev",
   },
 });
-
-const productsCont = document.querySelector(".solutions__products");
-let heightCont = productsCont.offsetHeight;
-productsCont.style.height = `${heightCont + 52}px`;
+function heightChangeOnDesctop() {
+  if (window.innerWidth > 1024) {
+    console.log("yes");
+    const productsCont = document.querySelector(".solutions__products");
+    let heightCont = productsCont.offsetHeight;
+    productsCont.style.height = `${heightCont + 52}px`;
+    return;
+  } else {
+    productsCont.style.height = ``;
+  }
+}
+heightChangeOnDesctop();
 
 const text = document.querySelector(".solutions__text");
 const button = document.querySelector(".solutions__button");

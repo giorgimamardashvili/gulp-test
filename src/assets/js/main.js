@@ -5,13 +5,19 @@ const swiperMain = new Swiper(".main-slider__container", {
 
   // If we need pagination
   pagination: {
-    el: ".main-slider__pag",
+    el: ".main-slider__container .main-slider__pag",
+    clickable: true,
   },
+});
+const swiperMain2 = new Swiper(".main-slider__container_second", {
+  // Optional parameters
+  direction: "horizontal",
+  slidesPerView: 1,
 
-  // Navigation arrows
-  navigation: {
-    nextEl: ".main-slider__next",
-    prevEl: ".main-slider__prev",
+  // If we need pagination
+  pagination: {
+    el: ".main-slider__container_second .main-slider__pag",
+    clickable: true,
   },
 });
 const swiperPartners = new Swiper(".partners-slider__container", {
@@ -73,16 +79,21 @@ const enableSwiper = function () {
       prevEl: ".products-slider__prev",
     },
   });
-  swiperSolutions = new Swiper(".solution-slider__container", {
+  swiperSolutions = new Swiper(".solutions__container .swiper", {
     // Optional parameters
     direction: "horizontal",
-    slidesPerView: "auto",
-    spaceBetween: 20,
+    slidesPerView: 4,
+    spaceBetween: 15,
+
+    // If we need pagination
+    pagination: {
+      el: ".solutions__container .swiper-pagination ",
+    },
 
     // Navigation arrows
     navigation: {
-      nextEl: ".solution-slider__next",
-      prevEl: ".solution-slider__prev",
+      nextEl: ".solutions__container .swiper-button-next",
+      prevEl: ".solutions__container .swiper-button-prev",
     },
   });
 };

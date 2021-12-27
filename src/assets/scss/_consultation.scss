@@ -1,7 +1,7 @@
 .consultation {
   position: fixed;
-  bottom: 50px;
-  right: 140px;
+  top: 200px;
+  right: -60px;
   width: 182px;
   height: 48px;
   background: transparent;
@@ -10,14 +10,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: rotate(-90deg);
   z-index: 10;
 
-  @include lg {
-    right: 100px;
-  }
   @include tab {
+    top: unset;
+    bottom: 55px;
     right: 16px;
-    bottom: 20px;
+    width: 56px;
+    height: 56px;
   }
 
   span {
@@ -25,5 +26,14 @@
     letter-spacing: 0.09em;
     line-height: 16px;
     margin-left: 15px;
+    color: white;
+    @include tab {
+      display: none;
+    }
+  }
+  svg {
+    .a {
+      fill: white;
+    }
   }
 }

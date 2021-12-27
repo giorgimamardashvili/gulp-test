@@ -68,24 +68,32 @@
 -
     const solutions = [
         {
-            image: 'assets/img/solutions-img.jpg',
-            title: 'OEM 4G 14dBi Panel Antenna Lorem Ipsum'
+            title: 'Indoor Building Solution',
+            image: 'assets/img/Group 3427.jpg',
         },
         {
-            image: 'assets/img/solutions-img.jpg',
-            title: 'OEM 4G 14dBi Panel Antenna Lorem Ipsum'
+            title: 'Indoor Building Solution',
+            image: 'assets/img/Group 3427.jpg',
         },
         {
-            image: 'assets/img/solutions-img.jpg',
-            title: 'OEM 4G 14dBi Panel Antenna Lorem Ipsum'
+            title: 'Indoor Building Solution',
+            image: 'assets/img/Group 3427.jpg',
         },
         {
-            image: 'assets/img/solutions-img.jpg',
-            title: 'OEM 4G 14dBi Panel Antenna Lorem Ipsum'
+            title: 'Indoor Building Solution',
+            image: 'assets/img/Group 3427.jpg',
         },
         {
-            image: 'assets/img/solutions-img.jpg',
-            title: 'OEM 4G 14dBi Panel Antenna Lorem Ipsum'
+            title: 'Indoor Building Solution',
+            image: 'assets/img/Group 3427.jpg',
+        },
+        {
+            title: 'Indoor Building Solution',
+            image: 'assets/img/Group 3427.jpg',
+        },
+        {
+            title: 'Indoor Building Solution',
+            image: 'assets/img/Group 3427.jpg',
         },
     ]
 -
@@ -118,19 +126,20 @@ html(lang="en")
     body 
         include layout/_header
         main
-            section.main-slider#mainSlider
+            section.main-slider.container#mainSlider
                 .swiper.main-slider__container
                     .swiper-wrapper 
                         each slide, i in slides
-                            .swiper-slide.main-slider__slide
+                            .swiper-slide.main-slider__slide(style="background-image: url('./assets/img/main-slider-img.jpg')")
                                 h2=slide.title   
                                 a.more=slide.button
                     .swiper-pagination.main-slider__pag
-                    .swiper-button-prev.main-slider__prev.button
-                    .swiper-button-next.main-slider__next.button
-                .main-slider__bottom
-                    a(href="#productSlider" class="blue-button")
-                        img(src="assets/img/blue-arrow-down.png", alt="")
+                .swiper.main-slider__container_second
+                    .swiper-wrapper 
+                        each slide, i in slides
+                            .swiper-slide.main-slider__slide(style="background-image: url('./assets/img/main-slider-second.jpg')")
+                                h2 5G Ready
+                    .swiper-pagination.main-slider__pag
 
             section.products-slider.standart-slider.container#productSlider
                 .standart-slider__top
@@ -175,20 +184,18 @@ html(lang="en")
                 .standart-slider__top
                     h3 Solutions
                     a(href="#") View All
-                .standart-slider__bottom
-                    .standart-slider__container.swiper.solution-slider__container
+                .standart-slider__bottom.solutions__container
+                    .standart-slider__container.swiper
                         .swiper-wrapper
                             each solution, i in solutions
                                 .swiper-slide.solution-slider__slide
-                                    .solution-slider__img 
-                                        img(src=solution.image, alt="")
-                                    .solution-slider__text 
-                                        p=solution.title 
+                                    img.solution-slider__img(src=solution.image, alt="")
+                                    p.solution-slider__text=solution.title
 
 
                             
-                    .swiper-button-prev.main-slider__prev.button.solution-slider__prev
-                    .swiper-button-next.main-slider__next.button.solution-slider__next 
+                    .swiper-button-prev
+                    .swiper-button-next
             section.standart-slider.partners-slider
                     .standart-slider__top.container
                         h3 Our partners
