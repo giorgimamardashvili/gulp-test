@@ -1,6 +1,44 @@
 .services {
   margin-top: 100px;
 
+  .hidden {
+    display: none;
+    @include sm {
+      display: block;
+      text-align: center;
+      font-size: 24px;
+      padding: 0 10px;
+      width: fit-content;
+      background-color: white;
+    }
+  }
+
+  &__button {
+    width: 190px;
+    height: 56px;
+    margin: 15% auto 7% auto;
+    &::before {
+      content: "";
+      width: 122px;
+      height: 5px;
+      background: #00cbff;
+      position: absolute;
+      left: -122px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &::after {
+      content: "";
+      width: 122px;
+      height: 5px;
+      background: #00cbff;
+      position: absolute;
+      right: -122px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
   &__top {
     padding: 25px 0 55px;
   }
@@ -9,8 +47,19 @@
   .item {
     display: flex;
     width: 100%;
+    position: relative;
+    @include sm {
+      flex-direction: column-reverse !important;
+      align-items: center;
+      padding: 0 18px;
+      margin-bottom: 55px;
+    }
     &--reverse {
       flex-direction: row-reverse;
+      .hidden-container {
+        right: unset;
+        left: 0;
+      }
       .item__left {
         .text {
           align-items: flex-end;
@@ -32,6 +81,10 @@
               right: 0;
             }
           }
+          &__hover {
+            left: unset;
+            right: -10%;
+          }
         }
       }
     }
@@ -40,6 +93,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      @include sm {
+        width: 100%;
+      }
 
       .text {
         display: flex;
@@ -49,32 +105,29 @@
         margin-left: 50px;
         position: relative;
         background-color: #fff;
+        @include sm {
+          margin: 0 !important;
+          align-items: center !important;
+          width: fit-content;
+        }
 
         h2 {
           font-size: clamp(24px, 2.5vw, 48px);
           padding-bottom: 35px;
           padding-left: 20px;
           width: 80%;
+          @include sm {
+            display: none !important;
+          }
         }
         &__button {
           height: 56px;
           width: 148px;
+          @include sm {
+            height: 40px;
+          }
           &:hover {
             & + .text__hover {
-              &::before {
-                width: 100%;
-                transition: width 0s;
-              }
-              &::after {
-                width: 100%;
-                transition: width 0s;
-              }
-              span {
-                &::before {
-                  height: 100%;
-                  transition: height 0s;
-                }
-              }
             }
           }
         }
@@ -84,42 +137,12 @@
           height: calc(100% - 15px - 28px);
           left: -50px;
           top: 15px;
-          z-index: -1;
-          &::before {
-            content: "";
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 0%;
-            height: 1px;
-            background-color: black;
-            transition: width 0.3s;
-          }
-          &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 0%;
-            height: 1px;
-            background-color: black;
-            transition: width 0.3s 0.6s;
-          }
-          span {
-            width: 100%;
-            height: 100%;
-            display: block;
-            position: relative;
-            &::before {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 1px;
-              height: 0%;
-              background-color: black;
-              transition: height 0.3s 0.3s;
-            }
+          z-index: -2;
+          @include sm {
+            left: unset !important;
+            top: unset !important;
+            right: unset !important;
+            bottom: 20px;
           }
         }
       }
@@ -127,10 +150,27 @@
     &__right {
       width: 50%;
       aspect-ratio: 5/3;
+      @include sm {
+        width: 100%;
+        margin: 24px 0 32px 0;
+      }
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        display: block;
+      }
+    }
+    .hidden-container {
+      display: none;
+      position: absolute;
+      bottom: 20px;
+      z-index: -1;
+      background-color: #fff;
+      width: 50%;
+      height: 100%;
+      right: 0;
+      @include sm {
         display: block;
       }
     }
