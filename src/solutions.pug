@@ -1,0 +1,146 @@
+- const scrollToTop = `#solutions`
+-
+    const solutions = [
+        {
+            title: 'Indoor Building Solution',
+            image: 'assets/img/Group 3427.jpg',
+        },
+        {
+            title: 'Indoor Building Solution',
+            image: 'assets/img/Group 3427.jpg',
+        },
+        {
+            title: 'Indoor Building Solution',
+            image: 'assets/img/Group 3427.jpg',
+        },
+        {
+            title: 'Indoor Building Solution',
+            image: 'assets/img/Group 3427.jpg',
+        },
+        {
+            title: 'Indoor Building Solution',
+            image: 'assets/img/Group 3427.jpg',
+        },
+        {
+            title: 'Indoor Building Solution',
+            image: 'assets/img/Group 3427.jpg',
+        },
+        {
+            title: 'Indoor Building Solution',
+            image: 'assets/img/Group 3427.jpg',
+        },
+    ]
+-
+    const products = [
+        {
+            title: 'OEM 4G 14dBi Panel Antenna',
+            image: 'assets/img/product-img.jpg',
+            price: 88,
+            brand: "OEM",
+            model: 'FBADE-LTE14-5m',
+            ean: '0708747435788'
+        },
+        {
+            title: 'OEM 4G 14dBi Panel Antenna',
+            image: 'assets/img/product-img.jpg',
+            price: 88,
+            brand: "OEM",
+            model: 'FBADE-LTE14-5m',
+            ean: '0708747435788'
+        },
+        {
+            title: 'OEM 4G 14dBi Panel Antenna',
+            image: 'assets/img/product-img.jpg',
+            price: 88,
+            brand: "OEM",
+            model: 'FBADE-LTE14-5m',
+            ean: '0708747435788'
+        },
+        {
+            title: 'OEM 4G 14dBi Panel Antenna',
+            image: 'assets/img/product-img.jpg',
+            price: 88,
+            brand: "OEM",
+            model: 'FBADE-LTE14-5m',
+            ean: '0708747435788'
+        },
+    ]
+
+doctype html
+html(lang="en")
+    head
+        include layout/_head
+    body 
+        include layout/_header
+        main
+            section.solutions.container(id='solutions')
+                .services__top
+                    .links
+                        a(href="solutions.html") Home
+                        a Solutions
+                h2 Solutions
+                .solutions__container
+                    .swiper 
+                        .swiper-wrapper
+                            each item in solutions
+                                .swiper-slide
+                                    img(src=item.image, alt="")
+                                    p=item.title
+                    .swiper-pagination 
+                    .swiper-button-prev
+                    .swiper-button-next
+                hr
+                .solutions__text
+                    h3 Netframe support and maintenance
+                    p Our in-house competence extends from the design phase (planning and design) through to building (construction, installation and commissioning) and operating (operations and maintenance) your communications solutions. NetFrame has excellent relationships with equipment suppliers, but we are independent, giving us greater flexibility and agility to meet your project needs.
+                    p NetFrame has the resources, partnerships and infrastructure to design and deploy challenging, complicated and critical networks. Our strength is in our people. Today, NetFrame employs numerous engineers (specializing in structural and network design, telecommunications systems), field technicians and network operations specialists.
+                    p Our in-house competence extends from the design phase (planning and design) through to building (construction, installation and commissioning) and operating (operations and maintenance) your communications solutions. NetFrame has excellent relationships with equipment suppliers, but we are independent, giving us greater flexibility and agility to meet your project needs.
+                    p NetFrame has the resources, partnerships and infrastructure to design and deploy challenging, complicated and critical networks. Our strength is in our people. Today, NetFrame employs numerous engineers (specializing in structural and network design, telecommunications systems), field technicians and network operations specialists.
+                .animated-button.solutions__button
+                    span View More 
+                    .around
+                .solutions__categories
+                    a.category(style='--color:#00cbff') View indoor building services
+                    a.category(style='--color:#65ccae') View all indoor building products
+                .solutions__products 
+                    each product, i in products 
+                             a(href='product-inside.html').products-slider__slide
+                                .green-new New
+                                .slider-img 
+                                    img(src=product.image, alt="")
+                                .slider-text 
+                                    h4=product.title
+                                    p=product.title
+                                    div 
+                                        span BRAND:
+                                        span= " " + product.brand
+                                    div 
+                                        span MODEL:
+                                        span= " " + product.model
+                                    div 
+                                        span EAN/UPC:
+                                        span= " " + product.ean
+                                    .slider-text__checkbox 
+                                        label(class="checkbox")
+                                                input(type="checkbox" name='choose')
+                                                span.checkmark
+                                                span.checkbox-title Compare
+                                .slider-bottom 
+                                    .slider-bottom__info
+                                        .price 
+                                                p price:  
+                                                span= `${product.price}$`
+                                        .addto-cart
+                                            img(src="assets/img/basket.svg", alt="")
+                                    .slider-bottom__button
+                                        .listing-checkbox
+                                            label(class="checkbox")
+                                                input(type="checkbox" name='choose')
+                                                span.checkmark
+                                                span.checkbox-title Compare
+                                        .quick-view Quick View
+        include layout/_consultation
+        include layout/_footer
+        script(src='assets/js/swiper-bundle.min.js')
+        script(src='assets/js/solutions.js')
+
