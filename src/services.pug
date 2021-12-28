@@ -40,6 +40,16 @@ html(lang="en")
                     .links
                         a(href="index.html") Home
                         a Services
+                    .sorting-block__choose
+                            .listing.gril.active
+                                img(src="assets/img/listing.svg", alt="")
+                                | List
+                            .grid.gril
+                                img(src="assets/img/grid.svg", alt="")
+                                | Grid
+                a(href="#").back-button
+                     <svg xmlns="http://www.w3.org/2000/svg" width="7.657" height="13.314" viewBox="0 0 7.657 13.314"><defs><style>.a{fill:none;}.b,.c{stroke:none;}.c{fill:#202020;}</style></defs><g class="a" transform="translate(-30.414 16.586)"><path class="b" d="M30.707-3.565a1,1,0,0,1,0-1.414l4.949-4.95-4.949-4.95a1,1,0,0,1,0-1.414,1,1,0,0,1,1.414,0l5.657,5.656a1,1,0,0,1,.293.707,1,1,0,0,1-.293.707L32.121-3.565a1,1,0,0,1-.707.293A1,1,0,0,1,30.707-3.565Z"/><path class="c" d="M 31.41405487060547 -4.271944999694824 L 31.41395378112793 -4.272064685821533 L 37.07135391235352 -9.929044723510742 L 31.41426467895508 -15.58585453033447 L 37.07041549682617 -9.928805351257324 L 31.41330337524414 -4.272005081176758 C 31.41338348388672 -4.271985054016113 31.41366386413574 -4.271944999694824 31.41405487060547 -4.271944999694824 M 31.41405487060547 -3.271944999694824 C 31.15822410583496 -3.271944999694824 30.90240478515625 -3.369604825973511 30.70710372924805 -3.564904928207397 C 30.31650352478027 -3.95549488067627 30.31650352478027 -4.589095115661621 30.70710372924805 -4.978805065155029 L 35.65631484985352 -9.928805351257324 L 30.70710372924805 -14.87880516052246 C 30.31650352478027 -15.26940536499023 30.31650352478027 -15.9021053314209 30.70710372924805 -16.29269409179688 C 31.09770393371582 -16.68329620361328 31.73040199279785 -16.68329620361328 32.12100219726562 -16.29269409179688 L 37.77840423583984 -10.63620471954346 C 37.97370529174805 -10.44089508056641 38.07135391235352 -10.18485450744629 38.07135391235352 -9.928805351257324 C 38.07135391235352 -9.672755241394043 37.97370529174805 -9.416705131530762 37.77840423583984 -9.221405029296875 L 32.12100219726562 -3.564904928207397 C 31.92570304870605 -3.369604825973511 31.66987419128418 -3.271944999694824 31.41405487060547 -3.271944999694824 Z"/></g></svg>
+                     p Go back
                 .services__items
                     each val in itemsInfo
                         .item
@@ -53,6 +63,7 @@ html(lang="en")
                                         span.ui-border-element
                             .item__right 
                                 img(src=val.img1, alt="")
+                                h2=val.title1
                             h2.hidden=val.title1
                             .hidden-container
                         .item.item--reverse
@@ -66,6 +77,7 @@ html(lang="en")
                                         span.ui-border-element
                             .item__right 
                                 img(src=val.img2, alt="")
+                                h2=val.title2
                             h2.hidden=val.title2
                             .hidden-container
                     a.services__button.animated-button
@@ -74,5 +86,6 @@ html(lang="en")
         include layout/_consultation
         include layout/_footer
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        script(src='assets/js/script.js')
         script(src='assets/js/servicesPage.js')
 

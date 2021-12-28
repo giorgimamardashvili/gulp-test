@@ -1,0 +1,46 @@
+- const scrollToTop = `#portfolio`
+
+doctype html
+html(lang="en")
+    head
+        include layout/_head
+    body 
+        include layout/_header
+        main
+            section.portfolio.container(id='portfolio')
+                .services__top
+                    .links
+                        a(href="solutions.html") Home
+                        a portfolio
+                .user-information
+                    h2 User Information
+                    form(action="")
+                        label(for="account")
+                            span Account
+                            input(type="text", name="account")
+                        label(for="name")
+                            span Name
+                            input(type="text", name="name")
+                        label(for="surname")
+                            span Surname
+                            input(type="text", name="surname")
+                        label(for="mail")
+                            span E-mail
+                            input(type="email", name="mail")
+                        label(for="tel")
+                            span Phone
+                            input(type="tel", name="tel")
+                        label(for="password")
+                            span Password
+                            input(type="password", name="password") 
+                        label(for="newPassword")
+                            span New Password
+                            input(type="password", name="newPassword") 
+                        label(for="repeatPassword")
+                            span Repeat Password
+                            input(type="password", name="repeatPassword")
+                        .portfolio-button
+                            button(type="submit") Save changes
+            include layout/_consultation
+        include layout/_footer
+        script(src='assets/js/script.js')

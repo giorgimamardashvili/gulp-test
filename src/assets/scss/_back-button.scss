@@ -1,0 +1,30 @@
+.back-button {
+  width: 128px;
+  height: 40px;
+  border-radius: 4px;
+  background: transparent;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  &:hover {
+    background: $green;
+    svg {
+      path {
+        fill: white;
+      }
+    }
+    p {
+      color: white;
+    }
+  }
+
+  p {
+    font-size: 17px;
+  }
+  svg {
+    transform: rotate(180deg);
+  }
+}

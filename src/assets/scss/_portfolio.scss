@@ -1,0 +1,55 @@
+.portfolio {
+  margin-top: 100px;
+
+  .user-information {
+    max-width: 1360px;
+    margin: 0 auto 200px auto;
+    h2 {
+      font-family: "bold";
+      font-size: 28px;
+      margin-bottom: 64px;
+    }
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-auto-flow: column;
+      grid-gap: 16px 145px;
+      grid-template-rows: repeat(5, 48px);
+      @include xl {
+        grid-gap: 16px 100px;
+      }
+
+      label,
+      .portfolio-button {
+        display: grid;
+        grid-template-columns: 1fr minmax(100px, 400px);
+        grid-gap: 15px;
+
+        span {
+          font-size: 17px;
+          text-align: left;
+          color: #a1a1a1;
+          opacity: 0.8;
+          margin: auto 0;
+        }
+        input {
+          border-radius: 4px;
+          background: #fff;
+          border: 1px solid #313e48;
+          height: 100%;
+          padding: 13px 16px;
+        }
+      }
+
+      button {
+        width: 142px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $green;
+        color: white;
+        grid-column-start: 2;
+      }
+    }
+  }
+}

@@ -1,3 +1,20 @@
 a.consultation
     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><defs><style>.a{fill:rgba(32,32,32,0.87);}</style></defs><path class="a" d="M14,8H8v6H6V8H0V6H6V0H8V6h6Z"/></svg>
     span consultation
+.consultation-modal.modal
+    .modal-container
+        form(action="")
+            h3  Consultation
+            .close
+                span 
+                span
+            label(for="email") 
+                span Email
+                input(type="email", name="email")
+            label(for="name") 
+                span Name
+                input(type="email", name="name")
+            label(for="message") 
+                span Message
+                textarea(name="message", cols="30", rows="10")
+            button(type="submit") Send
