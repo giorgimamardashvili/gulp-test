@@ -323,20 +323,74 @@
       </section><a class="consultation"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><defs><style>.a{fill:rgba(32,32,32,0.87);}</style></defs><path class="a" d="M14,8H8v6H6V8H0V6H6V0H8V6h6Z"/></svg><span>consultation</span></a>
       <div class="consultation-modal modal">
         <div class="modal-container">
-          <form action="">
+          <form class="form" action="">
             <h3> Consultation</h3>
             <div class="close"><span> </span><span></span></div>
             <label for="email"> <span>Email</span>
               <input type="email" name="email">
             </label>
             <label for="name"> <span>Name</span>
-              <input type="email" name="name">
+              <input type="text" name="name">
             </label>
             <label for="message"> <span>Message</span>
               <textarea name="message" cols="30" rows="10"></textarea>
             </label>
             <button type="submit">Send</button>
           </form>
+        </div>
+      </div>
+      <div class="modal auth-modal">
+        <div class="modal-container"> 
+          <div class="form">
+            <div class="auth-modal__choose"> <span>Register</span><span class="active">Login</span></div>
+            <div class="close"><span> </span><span></span></div>
+            <form class="auth-modal__wrapper login active" action="">
+              <label for="email"> <span>Email</span>
+                <input type="email" name="email">
+              </label>
+              <label for="password"> <span>Password</span>
+                <input type="password" name="password">
+              </label><a class="forgotten-password" href="">Forgot your password?</a>
+              <button type="submit">Login </button>
+            </form>
+            <form class="auth-modal__wrapper reg" action="">
+              <div class="account-choose"> <span>Account</span>
+                <div class="account-choose__radio">
+                  <label class="checkbox">
+                    <input type="radio" name="account" id="legalEntity"><span class="checkmark"></span><span class="checkbox-title">Legal entity</span>
+                  </label>
+                  <label class="checkbox">
+                    <input type="radio" name="account" id="individual" checked><span class="checkmark"></span><span class="checkbox-title">Individual</span>
+                  </label>
+                </div>
+              </div>
+              <label for="name"> <span>Name</span>
+                <input type="text" name="name">
+              </label>
+              <label for="lastname"> <span>Last Name</span>
+                <input type="text" name="lastname">
+              </label>
+              <label class="legal" for="company"> <span>Company</span>
+                <input type="text" name="company">
+              </label>
+              <label class="legal" for="position"> <span>Position</span>
+                <input type="text" name="position">
+              </label>
+              <label class="legal" for="website"> <span>Website</span>
+                <input type="text" name="website">
+              </label>
+              <label for="email"> <span>Email</span>
+                <input type="email" name="email">
+              </label>
+              <label for="phone"> <span>Phone</span>
+                <input type="number" name="phone">
+              </label>
+              <label for="password"> <span>Password</span>
+                <input type="password" name="password">
+              </label>
+              <button type="submit">Registration </button>
+            </form>
+          </div>
         </div>
       </div>
     </main>
