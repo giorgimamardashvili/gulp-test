@@ -48,7 +48,7 @@
       background-color: $blue;
       top: 50%;
       transform: translateY(-50%);
-      left: calc(-50vw + 75px);
+      left: calc(-50vw + 70px);
     }
     &::after {
       content: "";
@@ -58,7 +58,7 @@
       background-color: $blue;
       top: 50%;
       transform: translateY(-50%);
-      right: calc(-50vw + 75px);
+      right: calc(-50vw + 70px);
     }
   }
 }

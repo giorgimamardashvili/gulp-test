@@ -41,6 +41,7 @@
         display: grid;
         grid-template-columns: 1fr minmax(100px, 400px);
         grid-gap: 15px;
+        position: relative;
         @include tab {
           display: flex;
           align-items: center;
@@ -63,10 +64,18 @@
           border: 1px solid #313e48;
           height: 100%;
           padding: 13px 16px;
+          position: relative;
+          opacity: 0.5;
           @include tab {
             width: 50%;
             margin-left: auto;
           }
+        }
+        img {
+          position: absolute;
+          top: 13px;
+          right: 15px;
+          opacity: 0.5;
         }
       }
 

@@ -1,0 +1,55 @@
+.modal.auth-modal
+    .modal-container 
+        .form
+            .auth-modal__choose 
+                span Register
+                span.active Login
+            .close
+                span 
+                span
+            form(action="").auth-modal__wrapper.login.active
+                label(for="email") 
+                    span Email
+                    input(type="email", name="email")
+                label(for="password") 
+                    span Password
+                    input(type="password", name="password")
+                a(href="").forgotten-password Forgot your password?
+                button(type="submit") Login 
+            form(action="").auth-modal__wrapper.reg
+                .account-choose 
+                    span Account
+                    .account-choose__radio
+                        label(class="checkbox")
+                            input(type="radio" name="account" id="legalEntity")
+                            span.checkmark
+                            span.checkbox-title Legal entity
+                        label(class="checkbox")
+                            input(type="radio" name="account" id="individual" checked)
+                            span.checkmark
+                            span.checkbox-title Individual
+                label(for="name") 
+                    span Name
+                    input(type="text", name="name")
+                label(for="lastname") 
+                    span Last Name
+                    input(type="text", name="lastname")
+                label(for="company").legal 
+                    span Company
+                    input(type="text", name="company")
+                label(for="position").legal 
+                    span Position
+                    input(type="text", name="position")
+                label(for="website").legal 
+                    span Website
+                    input(type="text", name="website")
+                label(for="email") 
+                    span Email
+                    input(type="email", name="email")
+                label(for="phone") 
+                    span Phone
+                    input(type="number", name="phone")
+                label(for="password") 
+                    span Password
+                    input(type="password", name="password")
+                button(type="submit") Registration 
