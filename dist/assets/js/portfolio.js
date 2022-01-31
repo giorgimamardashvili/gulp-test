@@ -1,1 +1,1 @@
-const swiper=new Swiper(".swiper",{direction:"horizontal",loop:!0,spaceBetween:50,navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}});
+const swiper=new Swiper(".swiper",{direction:"horizontal",loop:!0,spaceBetween:50,navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}});function textHover(){document.querySelectorAll(".portfolio-item__info").forEach((e=>{let t=e.querySelector("h3"),o=e.scrollHeight-t.scrollHeight-60;window.innerWidth>1024&&(e.style.top=`${o}px`)}))}textHover(),window.addEventListener("resize",(()=>{textHover()}));
