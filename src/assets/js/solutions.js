@@ -38,7 +38,7 @@ function heightChangeOnDesctop() {
     productsCont.style.height = ``;
   }
 }
-heightChangeOnDesctop();
+// heightChangeOnDesctop();
 
 const text = document.querySelector(".solutions__text");
 const button = document.querySelector(".solutions__button");

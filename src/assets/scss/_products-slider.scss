@@ -1,16 +1,8 @@
 .products-slider {
   &__swiper {
-    height: 585px;
-    @include xl {
-      height: 540px;
-    }
-    @include sm {
-      height: unset;
-    }
   }
   &__slide {
     width: 395px;
-    height: 515px;
     background: white;
     padding: 20px;
     border-radius: 4px;
@@ -20,25 +12,15 @@
     position: relative;
 
     &:hover {
-      height: 583px;
       box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.16);
-      .slider-bottom__button {
-        opacity: 1;
+      .quick-view {
+        opacity: 1 !important;
+        pointer-events: initial !important;
       }
     }
     @include xl {
       width: 330px;
-      height: 470px;
       padding: 12px;
-      &:hover {
-        height: 537px;
-        // .slider-bottom__button {
-        //   opacity: 1;
-        // }
-      }
-    }
-    @include tab {
-      height: 537px;
     }
     @include sm {
       box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.16);
@@ -125,6 +107,23 @@
             color: $green;
           }
         }
+        .quick-view {
+          width: 150px;
+          height: 36px;
+          background-color: $blue;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 5px;
+          color: white;
+          opacity: 0;
+          pointer-events: none;
+          @include tab {
+            opacity: 1;
+            pointer-events: initial;
+            width: 50%;
+          }
+        }
         .addto-cart {
           display: flex;
           align-items: center;
@@ -136,25 +135,15 @@
         }
       }
       &__button {
-        opacity: 0;
-        display: block;
-        padding: 15px 0 0 0;
-        border-top: 1px solid #f3f3f3;
-        transition: opacity 0.3s;
-        @include tab {
-          opacity: 1;
-        }
         .quick-view {
           width: 100%;
           height: 36px;
-          background-color: $blue;
+          background-color: #44b7d4;
           display: flex;
           align-items: center;
           justify-content: center;
           border-radius: 5px;
-        }
-        .listing-checkbox {
-          display: none;
+          color: white;
         }
       }
     }

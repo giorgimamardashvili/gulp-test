@@ -128,17 +128,13 @@ html(lang="en")
                                 .slider-bottom 
                                     .slider-bottom__info
                                         .price 
-                                                p price:  
-                                                span= `${product.price}$`
+                                            span= `${product.price}$`
+                                        .quick-view Quick View
                                         .addto-cart
                                             img(src="assets/img/basket.svg", alt="")
                                     .slider-bottom__button
-                                        .listing-checkbox
-                                            label(class="checkbox")
-                                                input(type="checkbox" name='choose')
-                                                span.checkmark
-                                                span.checkbox-title Compare
                                         .quick-view Quick View
+                                        
         include layout/_consultation
         include layout/_footer
         script(src='assets/js/swiper-bundle.min.js')

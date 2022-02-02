@@ -153,11 +153,17 @@
           padding: 15px 0 0 0;
         }
       }
+      .slider-bottom__info {
+        .quick-view {
+          @include tab {
+            display: none;
+          }
+        }
+      }
       .slider-bottom__button {
-        height: 0;
-        padding: 0;
+        display: none;
         @include tab {
-          height: unset;
+          display: block;
         }
       }
       .slider-img {

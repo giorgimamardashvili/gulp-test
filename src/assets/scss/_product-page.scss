@@ -265,7 +265,6 @@
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fill, 395px);
-    grid-auto-rows: 515px;
     justify-content: center;
     padding-bottom: 80px;
     @include lg {
@@ -324,6 +323,12 @@
             @include sm {
               flex-direction: row;
             }
+            .quick-view {
+              display: none;
+              @include tab {
+                display: flex;
+              }
+            }
           }
           &__button {
             order: -1;
@@ -331,6 +336,9 @@
             opacity: 1;
             display: flex;
             align-items: center;
+            @include tab {
+              display: none;
+            }
             @include sm {
               margin: 0;
             }
@@ -400,6 +408,22 @@
               @include sm {
                 display: none;
               }
+            }
+          }
+          .quick-view {
+            @include sm {
+              display: none;
+            }
+          }
+        }
+        .slider-bottom__button {
+          display: none;
+          @include sm {
+            display: block;
+          }
+          .listing-checkbox {
+            @include sm {
+              display: none;
             }
           }
         }
